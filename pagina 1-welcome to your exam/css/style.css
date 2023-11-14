@@ -1,9 +1,9 @@
 *,html{
     margin:0 auto;
  color: antiquewhite;
- font-family: 'Noto Sans', sans-serif;
+
     text-decoration: none;
- 
+    font-family: 'Outfit', sans-serif;
 }
 
 body{
@@ -34,11 +34,13 @@ body{
 h3{font-size: 60px;;}
 
 h2{font-size: 30px;
-    margin-bottom: 30px;}
+    margin-bottom: 30px;
+font-weight: bold;}
 
 
     p{margin-bottom:50px;
-    font-size:16px;}
+    font-size:16px;
+    line-height: 1.5em;}
 
 
     
@@ -46,20 +48,28 @@ h2{font-size: 30px;
     ul{padding-inline-start: 30px;
         margin-bottom:50px;}
 
-        li{font-size:16px;}
+        li{
+            line-height: 1.5em;
+            font-size:16px;}
 
-    button{
-        font-weight: bold;
-        margin-left:110px;
-    padding:10px;
-
-    padding-left:30px;
-    padding-right: 30px;
     
-    background-color:#00FFFF ; }
+        button{
+            color:#0b113b;
+            background-color: #00FFFF;
+            border: none;
+            margin:30px;
+            width: 120px;
+            height: 40px;
+            font-weight: 800;
+            box-shadow: 0px 0px 8px 2px #00FFFF;
+        } 
 a{color:#0b113b;}
 
     h2{color:#D20094;}
+
+    span{font-weight: bold;}
+
+
 
 
     
