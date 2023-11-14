@@ -3,7 +3,7 @@ body {
     font-size: 1em;
     background-image: url(../../../assets-immagini/bg.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 /*header*/
@@ -27,6 +27,44 @@ main {
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
-    font-size: 60px;
+    font-size: 3rem;
+    width: 50rem;
+    margin: 7rem auto 3rem auto;
 }
 
+main h2 span {
+    display: block;
+    font-weight: 600;
+}
+
+.test {
+    width: 60rem;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.test label {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.8rem 0 0.8rem;
+    background-size: cover;
+    background-color: rgb(255,255,255,0.1);
+    /*background: linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(144,0,128,0) 60%);*/
+    padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.test input[type="radio"]:checked+label {
+    background: rgb(210,0,148);
+    background: linear-gradient(180deg, rgba(210,0,148,1) 0%, rgba(144,0,128,1) 100%);
+}
