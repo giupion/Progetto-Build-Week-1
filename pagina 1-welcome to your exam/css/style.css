@@ -78,4 +78,35 @@ a{color:#0b113b;}
      
 
 input{margin-right:15px;}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 550px;
+    left: 150px;
+    height: 15px;
+    width: 15px;
+    background-color:#D20094;
+    border:2px solid white;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color:#0b113b;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
      
