@@ -76,17 +76,7 @@ a{color:#0b113b;}
         box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
       }
 
-
-      .myinput[type="checkbox"]:before {
-        position: relative;
-        display: block;
-        width: 11px;
-        height: 11px;
-        border: 1px solid #808080;
-        content: "";
-        background:#0b113b ;
-      }
-
+      
 
       
      
