@@ -1,15 +1,14 @@
 *,html{
     margin:0 auto;
  color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Noto Sans', sans-serif;
     text-decoration: none;
  
 }
 
 body{
     margin:0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+   
     background-image: url("../assets-immagini/bg.jpg");
 }
 
@@ -18,18 +17,49 @@ body{
 
 
     .EpicodeLogo{text-align: left;
-    
-    margin-left:50px;
+    margin-bottom: 50px;
+    margin-left:100px;
 }
 
-    .container{text-align: center;
+    .container{margin-left:100px;
+
     }
 
-    h1{font-size: 30px;
-    
+    h1{font-size: 60px;
+    font-weight: bold;
     margin-bottom: 50px;
 
 }
 
+h3{font-size: 60px;;}
+
 h2{font-size: 30px;
-    margin-bottom: 50px;}
+    margin-bottom: 30px;}
+
+
+    p{margin-bottom:50px;
+    font-size:16px;}
+
+
+    
+
+    ul{padding-inline-start: 30px;
+        margin-bottom:50px;}
+
+        li{font-size:16px;}
+
+    button{
+        font-weight: bold;
+        margin-left:110px;
+    padding:10px;
+
+    padding-left:30px;
+    padding-right: 30px;
+    
+    background-color:#00FFFF ; }
+a{color:#0b113b;}
+
+    h2{color:#D20094;}
+
+
+    
