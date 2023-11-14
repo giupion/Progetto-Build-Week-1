@@ -19,9 +19,17 @@ body{
 
     .EpicodeLogo{text-align: left;
     
-    margin-left:50px;}
+    margin-left:50px;
+}
 
     .container{text-align: center;
     }
 
-    h1{font-size: 15px;}
+    h1{font-size: 30px;
+    
+    margin-bottom: 50px;
+
+}
+
+h2{font-size: 30px;
+    margin-bottom: 50px;}
