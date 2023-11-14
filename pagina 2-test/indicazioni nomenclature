@@ -1,0 +1,8 @@
+Classi:
+- container: la classe del div contenitore dopo body.
+- test: classe dell'article contenente le vairie domande del test.
+- domanda: la domanda attuale del test.
+- paginaDomande: il div che contiene l'avanzamento delle pagine delle domande.
+
+ID:
+- logo: il logo di epicode nell'header.
