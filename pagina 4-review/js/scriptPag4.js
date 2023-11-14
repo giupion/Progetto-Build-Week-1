@@ -1,7 +1,7 @@
 
 
 let divstella=document.querySelectorAll("#stellina")
-
+for(i=0;)
 
 li.addEventListener('click',IlluminaStella);
 
