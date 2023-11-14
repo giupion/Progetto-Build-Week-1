@@ -4,27 +4,28 @@
 
     text-decoration: none;
     font-family: 'Outfit', sans-serif;
-}
+    background-size: cover;
+
+  }
 
 body{
-    margin:0 auto;
-   
+ margin-left: 250px;
     background-image: url("../assets-immagini/bg.jpg");
 }
 
-
+.container{text-align: left;
+  margin:0 auto;
+  width:100%;
+}
 
 
 
     .EpicodeLogo{text-align: left;
     margin-bottom: 50px;
-    margin-left:100px;
+    
 }
 
-    .container{margin-left:100px;
-
-    }
-
+ 
     h1{font-size: 60px;
     font-weight: bold;
     margin-bottom: 50px;
@@ -54,15 +55,23 @@ font-weight: bold;}
 
     
         button{
+          display: flex;
             color:#0b113b;
             background-color: #00FFFF;
             border: none;
-            margin-left:80px;
+
             width: 120px;
             height: 40px;
-            font-weight: 800;
+            font-weight: bolder;
             transition: all 0.2s ease-in-out;
-        } 
+            padding-bottom: 40px;
+            padding-top:20px;
+          padding-left:20px;
+          padding-right:20px;
+  font-size:16px;
+} 
+
+
 a{color:#0b113b;}
 
     h2{color:#D20094;}
@@ -77,36 +86,72 @@ a{color:#0b113b;}
       }
      
 
-input{margin-right:15px;}
-
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  .checkmark {
-    position: absolute;
-    top: 550px;
-    left: 150px;
-    height: 15px;
-    width: 15px;
-    background-color:#D20094;
-    border:2px solid white;
-  }
-
-  .container input:checked ~ .checkmark {
-    background-color:#0b113b;
-  }
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
      
+
+
+      form {
+        margin: 1rem auto;
+        max-width: 750px;
+    }
+
+
+    .wrapper {
+      position: relative;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+  }
+
+  .wrapper label {
+
+    margin:30px;
+    display: inline;
+          
+}
+
+
+.wrapper input {
+	height: 10px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 10px;
+}
+
+.wrapper input + label::before {
+  border: 2px solid;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 10px;
+}
+
+.wrapper input + label::after {
+	content: "";
+	border: 2px solid;
+	border-left: 0;
+	border-top: 0;
+	height: 5px;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	transform: rotate(45deg);
+	transition: opacity 0.2s ease-in-out;
+	width: 10px;
+}
+
+.wrapper input:checked + label::after {
+	opacity: 1;
+}
+
+
+input{  display: inline;
+  }
+
+
+
+ 
