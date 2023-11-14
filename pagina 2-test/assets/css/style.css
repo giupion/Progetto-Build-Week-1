@@ -1,0 +1,32 @@
+/*Generale*/
+body {
+    font-size: 1em;
+    background-image: url(../../../assets-immagini/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*header*/
+
+header {
+    text-align: left;
+}
+
+#logo {
+    height: 40px;
+    margin-left: 130px;
+    margin-top: 40px;
+}
+
+/*main*/
+
+main {
+    text-align: center;
+}
+
+main h2 {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    font-size: 60px;
+}
+
