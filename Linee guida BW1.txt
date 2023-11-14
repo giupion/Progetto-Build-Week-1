@@ -1,0 +1,59 @@
+Linee guida BW I
+
+Benvenuti alla prima Build Week!
+
+In questa settimana lavorerete in team per creare un progetto che sarà parte del vostro portfolio. I team rimarranno gli stessi per l'intera settimana.
+Durante la Build Week non avremo lezioni ma avremo dei checkpoint, e ovviamente vi forniremo del supporto quando necessario.
+L'obiettivo della settimana non è solo di migliorare le vostre capacità tecniche ma anche quello di imparare a collaborare efficacemente come gruppo. Durante questi giorni imparerete molto probabilmente a:
+
+- Usare GitHub per collaborare come team
+- Organizzare e dividervi i task tra i componenti del team
+- Gestire piccoli conflitti (sia con GitHub che con i tuoi compagni!)
+
+Ricorda che la Build Week può essere stressante. Ci aspettiamo che tu sia il miglior compagno che uno si possa aspettare di ricevere. Rispetta il resto del gruppo e ricorda: state remando nella stessa direzione e per lo stesso scopo!
+Qualsiasi informazione riguardo la build week, come le registrazioni e appuntamenti verrà sbloccato appena dopo il meeting mattutino.
+
+Informazione sulla Build Week & appuntamenti
+
+Attività
+
+- lunedì: meeting - 9AM (obbligatorio)
+- da martedì, mercoledì, giovedì, venerdì: standup mattutini (obbligatori)
+- da lunedì a giovedì: Standup serali (obbligatori)
+
+Team Check
+
+La mattina avrai 10 minuti per organizzarti con il tuo docente. Durante i check dichiarerai le attività che pensi di riuscire a svolgere durante la giornata. Questo avviene in praticamente tutte le aziende, vengono chiamati Stand Up Meeting.
+Ogni membro del team dovrà:
+
+- Dire quali obiettivi ha raggiunto il giorno precedente
+- Annunciare quali task porterà a termine durante la giornata corrente
+- Chiedere aiuto per eventuali problemi o imprevisti inaspettati (se hai bisogno di più di 5/10 minuti, contatta il docente per fissare una chiamata 1on1)
+
+In ogni buon team, ogni membro darà queste informazioni nel più breve tempo possibile, circa 1 minuto. Regolati di conseguenza anche tu.
+La parte finale del meeting si può usare per risolvere problemi di qualsiasi tipo.
+Prima del debrief quotidiano, assicurati di fare un meeting con il tuo team, fai il merge del codice e SII PRONTO a presentare.
+
+Frequently Asked Questions
+
+- Va bene se salto le attività obbligatorie? 
+Le regole riguardanti la presenza sono le stesse di una classe normale. Sei pregato di partecipare, se hai un impegno importante faccelo sapere con il dovuto anticipo.
+
+- Il mio compagno non sta producendo / non sembra presente, cosa devo fare? 
+Informa il docente della situazione e prova a raggiungere il compagno in modo cortese e spiegagli perché il suo comportamento sta penalizzando il team. Le emergenze possono capitare, ma sparire per l'intera settimana senza avvisare non è un comportamento accettabile.
+
+-Mi sento debole su alcuni argomenti che vengono toccati nella build week, posso saltarla per ripassare?
+In breve, no, non puoi saltarla. È molto importante ed è una parte cruciale del processo di apprendimento. Questo include anche mettersi in gioco e lottare contro le tue insicurezze. Se non sei a tuo agio con un argomento, non scappare, ma prendi una parte più piccola di progetto e comincia a lavorarci. Se non sai qualcosa chiedi aiuto sia ai tuoi compagni che nel canale di peer-learning, o al docente. Altrimenti google e stack overflow sono sempre i tuoi migliori amici.
+
+- Ho finito con la mia parte, che fare?  
+Innanzitutto, sei sicuro di aver finito? Assicurati che il codice sia leggibile, commentato dove le cose diventano più complesse e che il progetto sia "fully responsive".Se hai davvero davvero finito, chiedi ai tuoi compagni se hanno bisogno di aiuto con qualcosa o comincia un nuovo task dalla tua board.
+
+Supporto
+
+A parte gli eventi mattutini e i debrief il docente è disponibile per 1on1.
+Usa questa regola: se il problema di sta affliggendo per più di 20 minuti consecutivi:
+
+1) Chiedi aiuto al tuo team e prova a risolvere il problema in gruppo
+2) Se l'intero team non ti sa aiutare manda un messaggio al docente per organizzare un 1on1 con tutto il team
+
+Siamo sempre ad un messaggio di distanza, ma ricorda: trovarsi le soluzioni da soli fa parte del processo per diventare un vero sviluppatore!
