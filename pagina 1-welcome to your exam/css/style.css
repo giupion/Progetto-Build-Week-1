@@ -77,6 +77,16 @@ a{color:#0b113b;}
       }
 
 
-     #check::after {
-        background: red;
+      .myinput[type="checkbox"]:before {
+        position: relative;
+        display: block;
+        width: 11px;
+        height: 11px;
+        border: 1px solid #808080;
+        content: "";
+        background:#0b113b ;
       }
+
+
+      
+     
