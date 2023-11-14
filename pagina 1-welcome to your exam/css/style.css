@@ -1,0 +1,82 @@
+*,html{
+    margin:0 auto;
+ color: antiquewhite;
+
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    margin:0 auto;
+   
+    background-image: url("../assets-immagini/bg.jpg");
+}
+
+
+
+
+
+    .EpicodeLogo{text-align: left;
+    margin-bottom: 50px;
+    margin-left:100px;
+}
+
+    .container{margin-left:100px;
+
+    }
+
+    h1{font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+
+}
+
+h3{font-size: 60px;;}
+
+h2{font-size: 30px;
+    margin-bottom: 30px;
+font-weight: bold;}
+
+
+    p{margin-bottom:50px;
+    font-size:16px;
+    line-height: 1.5em;}
+
+
+    
+
+    ul{padding-inline-start: 30px;
+        margin-bottom:50px;}
+
+        li{
+            line-height: 1.5em;
+            font-size:16px;}
+
+    
+        button{
+            color:#0b113b;
+            background-color: #00FFFF;
+            border: none;
+            margin-left:80px;
+            width: 120px;
+            height: 40px;
+            font-weight: 800;
+            transition: all 0.2s ease-in-out;
+        } 
+a{color:#0b113b;}
+
+    h2{color:#D20094;}
+
+    span{font-weight: bold;}
+
+    
+
+    .glow-button:hover {
+        color: rgba(255, 255, 255, 1);
+        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+      }
+
+
+     #check::after {
+        background: red;
+      }
