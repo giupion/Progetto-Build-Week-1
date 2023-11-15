@@ -4,20 +4,24 @@
 
     text-decoration: none;
     font-family: 'Outfit', sans-serif;
-    background-size: cover;
+
+  
 
   }
 
-body{
+
+
+body{background-image: url("../assets-immagini/bg.jpg")  ;
  margin-left: 250px;
-    background-image: url("../assets-immagini/bg.jpg");
+ background-size: 120% 140%;
 }
 
 .container{text-align: left;
   margin:0 auto;
   width:100%;
-}
 
+
+}
 
 
     .EpicodeLogo{text-align: left;
@@ -54,24 +58,7 @@ font-weight: bold;}
             font-size:16px;}
 
     
-        button{
-          display: flex;
-            color:#0b113b;
-            background-color: #00FFFF;
-            border: none;
-
-            width: 120px;
-            height: 40px;
-            font-weight: bolder;
-            transition: all 0.2s ease-in-out;
-            padding-bottom: 40px;
-            padding-top:20px;
-          padding-left:20px;
-          padding-right:20px;
-  font-size:16px;
-} 
-
-
+      
 a{color:#0b113b;}
 
     h2{color:#D20094;}
@@ -96,7 +83,7 @@ a{color:#0b113b;}
 
 
     .wrapper {
-      position: relative;
+      position: absolute;
       margin-bottom: 1rem;
       margin-top: 1rem;
       text-align: left;
@@ -105,7 +92,7 @@ a{color:#0b113b;}
   .wrapper label {
 
     margin:30px;
-    display: inline;
+ 
           
 }
 
@@ -114,16 +101,16 @@ a{color:#0b113b;}
 	height: 10px;
 	left: 0;
 	opacity: 0;
-	position: absolute;
+	position: relative;
 	top: 0;
-	width: 10px;
+	width: 40px;
 }
-
+/*selezioanto solo primo label vicino input*/
 .wrapper input + label::before {
   border: 2px solid;
   content: "";
   height: 10px;
-  left: 0;
+  left: 50px;
   position: absolute;
   top: 0;
   width: 10px;
@@ -132,13 +119,14 @@ a{color:#0b113b;}
 .wrapper input + label::after {
 	content: "";
 	border: 2px solid;
-	border-left: 0;
+	border-left: 40px;
 	border-top: 0;
-	height: 5px;
-	left: 0px;
+	height: 4px;
+  left: 50px;
 	opacity: 0;
 	position: absolute;
 	top: 0px;
+  right: 40px;
 	transform: rotate(45deg);
 	transition: opacity 0.2s ease-in-out;
 	width: 10px;
@@ -149,8 +137,24 @@ a{color:#0b113b;}
 }
 
 
-input{  display: inline;
-  }
+button{
+          
+  color:#0b113b;
+  background-color: #00FFFF;
+  border: none;
+
+  width: 120px;
+  height: 40px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 40px;
+  padding-top:20px;
+padding-left:20px;
+padding-right:20px;
+font-size:16px;
+} 
+
+
 
 
 
