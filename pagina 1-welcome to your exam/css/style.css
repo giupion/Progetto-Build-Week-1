@@ -11,10 +11,8 @@ color: antiquewhite;
 
 
 
-body{background-image: url("../assets-immagini/bg.jpg")  ;
-  
-    background-size: cover;
-    
+body{background-image: url("../assets-immagini/bg.jpg") ;
+    background-size:cover;
 
 margin-left: 250px;
 
@@ -87,54 +85,50 @@ a{color:#0b113b;}
 
 
   .wrapper {
-    position: absolute;
+    position: relative;
     margin-bottom: 1rem;
     margin-top: 1rem;
     
 }
 
-.wrapper label {
 
-  
-
-        
-}
 
 
 .wrapper input {
-height: 10px;
-left: 0;
-opacity: 0;
-position: relative;
-top: 0;
-width: 40px;
+
+	opacity: 0;
+	position: absolute;
+	top: 0;
+width:0;
+height:0;
+
 }
 /*selezioanto solo primo label vicino input*/
 .wrapper input + label::before {
-border: 2px solid;
-content: "";
-height: 10px;
-left:10px;
-position: absolute;
-top: 0;
-width: 10px;
-bottom:40px;
+	border: 3px solid ;
+	content: "";
+	height: 10px;
+	left: -50px;
+	position: absolute;
+	border:content-box;
+	width: 10px;
+  top: 23px;
+	left: -20px;
 }
 
 .wrapper input + label::after {
-content: "";
-border: 2px solid;
-border-left: 40px;
-border-top: 0;
-height: 4px;
-left: 50px;
-opacity: 0;
-position: absolute;
-top: 0px;
-right: 40px;
-transform: rotate(45deg);
-transition: opacity 0.2s ease-in-out;
-width: 10px;
+	content: "";
+	border: 2px solid;
+	border-left: 0;
+	border-top: 0;
+	height: 10px;
+	left: -20px;
+	opacity: 0;
+	position: absolute;
+	top: 20px;
+	transform: rotate(45deg);
+	transition: opacity 0.2s ease-in-out;
+	width: 12px;
 }
 
 .wrapper input:checked + label::after {
@@ -147,7 +141,7 @@ button{
 color:#0b113b;
 background-color: #00FFFF;
 border: none;
-
+margin-left: 80px;
 width: 120px;
 height: 40px;
 font-weight: bolder;
@@ -158,3 +152,7 @@ padding-left:20px;
 padding-right:20px;
 font-size:16px;
 } 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
