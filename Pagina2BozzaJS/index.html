@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bozza</title>
+    <style>
+        input[type="radio"] {
+            display: none;
+        }
+
+
+        label {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 1px;
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>prova</h2>
+        <form id="risposte">
+            <input type="radio" id="risposta1" name="opzioni" />
+            <label for="risposta1">Opzione 1</label>
+
+            <input type="radio" id="risposta2" name="opzioni" />
+            <label for="risposta2">Opzione 2</label>
+            <input type="number" min="1" max="100">
+        </form>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
