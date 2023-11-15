@@ -1,161 +1,159 @@
 *,html{
-    margin:0 auto;
- color: antiquewhite;
+  margin:0 auto;
+color: antiquewhite;
 
-    text-decoration: none;
-    font-family: 'Outfit', sans-serif;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
 
-  
 
-  }
+
+}
 
 
 
 body{background-image: url("../assets-immagini/bg.jpg")  ;
- margin-left: 250px;
- background-size: 120% 140%;
+  
+    background-size: cover;
+    
+
+margin-left: 250px;
+
 }
 
 .container{text-align: left;
-  margin:0 auto;
-  width:100%;
+margin:0 auto;
+width:100%;
 
 
 }
 
 
-    .EpicodeLogo{text-align: left;
-    margin-bottom: 50px;
-    
+  .EpicodeLogo{text-align: left;
+  margin-bottom: 50px;
+  
 }
 
- 
-    h1{font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 50px;
+
+  h1{font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 50px;
 
 }
 
 h3{font-size: 60px;;}
 
 h2{font-size: 30px;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 font-weight: bold;}
 
 
-    p{margin-bottom:50px;
-    font-size:16px;
-    line-height: 1.5em;}
+  p{margin-bottom:50px;
+  font-size:16px;
+  line-height: 1.5em;}
 
 
+  
+
+  ul{padding-inline-start: 30px;
+      margin-bottom:50px;}
+
+      li{
+          line-height: 1.5em;
+          font-size:16px;}
+
+  
     
-
-    ul{padding-inline-start: 30px;
-        margin-bottom:50px;}
-
-        li{
-            line-height: 1.5em;
-            font-size:16px;}
-
-    
-      
 a{color:#0b113b;}
 
-    h2{color:#D20094;}
+  h2{color:#D20094;}
 
-    span{font-weight: bold;}
+  span{font-weight: bold;}
 
-    
+  
 
-    .glow-button:hover {
-        color: rgba(255, 255, 255, 1);
-        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-      }
-     
-
-     
-
-
-      form {
-        margin: 1rem auto;
-        max-width: 750px;
+  .glow-button:hover {
+      color: rgba(255, 255, 255, 1);
+      box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     }
+   
+
+   
 
 
-    .wrapper {
-      position: absolute;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      text-align: left;
+    form {
+      margin: 1rem auto;
+      max-width: 750px;
   }
 
-  .wrapper label {
 
-    margin:30px;
- 
-          
+  .wrapper {
+    position: absolute;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.wrapper label {
+
+  margin:30px;
+
+        
 }
 
 
 .wrapper input {
-	height: 10px;
-	left: 0;
-	opacity: 0;
-	position: relative;
-	top: 0;
-	width: 40px;
+height: 10px;
+left: 0;
+opacity: 0;
+position: relative;
+top: 0;
+width: 40px;
 }
 /*selezioanto solo primo label vicino input*/
 .wrapper input + label::before {
-  border: 2px solid;
-  content: "";
-  height: 10px;
-  left: 50px;
-  position: absolute;
-  top: 0;
-  width: 10px;
+border: 2px solid;
+content: "";
+height: 10px;
+left: 50px;
+position: absolute;
+top: 0;
+width: 10px;
 }
 
 .wrapper input + label::after {
-	content: "";
-	border: 2px solid;
-	border-left: 40px;
-	border-top: 0;
-	height: 4px;
-  left: 50px;
-	opacity: 0;
-	position: absolute;
-	top: 0px;
-  right: 40px;
-	transform: rotate(45deg);
-	transition: opacity 0.2s ease-in-out;
-	width: 10px;
+content: "";
+border: 2px solid;
+border-left: 40px;
+border-top: 0;
+height: 4px;
+left: 50px;
+opacity: 0;
+position: absolute;
+top: 0px;
+right: 40px;
+transform: rotate(45deg);
+transition: opacity 0.2s ease-in-out;
+width: 10px;
 }
 
 .wrapper input:checked + label::after {
-	opacity: 1;
+opacity: 1;
 }
 
 
 button{
-          
-  color:#0b113b;
-  background-color: #00FFFF;
-  border: none;
+        
+color:#0b113b;
+background-color: #00FFFF;
+border: none;
 
-  width: 120px;
-  height: 40px;
-  font-weight: bolder;
-  transition: all 0.2s ease-in-out;
-  padding-bottom: 40px;
-  padding-top:20px;
+width: 120px;
+height: 40px;
+font-weight: bolder;
+transition: all 0.2s ease-in-out;
+padding-bottom: 40px;
+padding-top:20px;
 padding-left:20px;
 padding-right:20px;
 font-size:16px;
 } 
-
-
-
-
-
- 
