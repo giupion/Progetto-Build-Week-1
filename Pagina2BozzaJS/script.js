@@ -101,42 +101,38 @@
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
 ];
-let punteggioUtente;
+let punteggioUtente=0;
 let questionNumber = 0;
 let h2 = document.querySelector("h2");
 let form = document.querySelector("form");
 h2.innerText = "Seleziona il numero di domande:";
 let input= `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
-let bottoneNumero = ` <button onclick="inizioTest()">Inizia il test!</button>`;
+let bottoneNumero = ` <button onclick="mostraDomanda()">Inizia il test!</button>`;
 form.innerHTML=input+bottoneNumero;
+let numDomande=Number(document.getElementById("numeroDomande").value);
+let domande = sottoArray (questions,numDomande);    
 
-function inizioTest(){
-    let numDomande=Number(document.getElementById("numeroDomande").value);
-    let domande = sottoArray (questions,numDomande);
+let mostraDomanda=()=>{
     let risposte=[];
-    let opzioni;
-    while(questionNumber<numDomande){
-        form.innerHTML=` <button type="button" onclick="rispostaUtente()">Domanda Successiva</button>`;
+    if(questionNumber<numDomande){
+        console.log("è partito l'intervallo")              
+        form.innerHTML=` <button type="button" id="conferma">Conferma</button>`;
         h2.innerHTML=domande[questionNumber].question;
         risposte = shuffleRisposte(domande[questionNumber]);
-
         for(let i=0; i<risposte.length;i++){
             form.innerHTML=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
                               <label for="risposta ${i+1}">${risposte[i]}</label>`+form.innerHTML;
         }
-        console.log(`domanda ${questionNumber}`);
-        opzioni = document.querySelectorAll(input[type="radio"]);
-
-
-
-
-    
-        questionNumber++;
-   }
-    
+        console.log(`domanda ${questionNumber+1}`);
+        document.querySelector("#conferma").addEventListener("click",()=>{
+            valutaRisposta();
+        })            
+    }
 }
 
-let sottoArray=(arr,n)=>{
+
+
+function sottoArray(arr,n){
     let sottoArray =[];
     let arrClone = [...arr];
     for(let i=0; i<n;i++){
@@ -148,6 +144,7 @@ let sottoArray=(arr,n)=>{
 let shuffleRisposte=(domanda)=>{
     console.log(domanda)
     let risposte = [domanda.correct_answer,...domanda.incorrect_answers];
+    console.log(risposte)
     return sottoArray(risposte,risposte.length);
 }
 
@@ -155,8 +152,24 @@ let shuffleRisposte=(domanda)=>{
 
 
 
+let valutaRisposta=()=>{
+    console.log("sono in valutaRisposta()");
+    document.querySelector("#conferma").removeEventListener("click",()=>{
+        valutaRisposta(domande)
+    });
+    let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
+    console.log(rispostaUtente)
+    if(rispostaUtente===domande[questionNumber].correct_answer){
+        console.log("risposta esatta")
+        punteggioUtente++;
+    }else{
+        console.log("Risposta sbagliata");
+        console.log(" rispostaUtente");
+    }
+    questionNumber++;
+    mostraDomanda(domande)
 
-
+}
 
 
 /*
