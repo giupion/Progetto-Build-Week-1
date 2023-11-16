@@ -107,15 +107,14 @@ let h2 = document.querySelector("h2");
 let form = document.querySelector("form");
 h2.innerText = "Seleziona il numero di domande:";
 let input= `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
-let bottoneNumero = ` <button onclick="mostraDomanda()">Inizia il test!</button>`;
+let bottoneNumero = ` <button type="button" onclick="mostraDomanda()">Inizia il test!</button>`;
 form.innerHTML=input+bottoneNumero;
 let numDomande=Number(document.getElementById("numeroDomande").value);
 let domande = sottoArray (questions,numDomande);    
 
 let mostraDomanda=()=>{
     let risposte=[];
-    if(questionNumber<numDomande){
-        console.log("è partito l'intervallo")              
+    if(questionNumber<numDomande){             
         form.innerHTML=` <button type="button" id="conferma">Conferma</button>`;
         h2.innerHTML=domande[questionNumber].question;
         risposte = shuffleRisposte(domande[questionNumber]);
@@ -155,20 +154,18 @@ let shuffleRisposte=(domanda)=>{
 let valutaRisposta=()=>{
     console.log("sono in valutaRisposta()");
     document.querySelector("#conferma").removeEventListener("click",()=>{
-        valutaRisposta(domande)
+        valutaRisposta()
     });
     let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
-    console.log(rispostaUtente)
+    console.log(typeof rispostaUtente)
     if(rispostaUtente===domande[questionNumber].correct_answer){
         console.log("risposta esatta")
         punteggioUtente++;
     }else{
         console.log("Risposta sbagliata");
-        console.log(" rispostaUtente");
     }
     questionNumber++;
-    mostraDomanda(domande)
-
+    mostraDomanda();
 }
 
 
