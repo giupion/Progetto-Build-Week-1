@@ -57,3 +57,38 @@ border-color:white ;
 color: white;
 background-color: transparent;
 }
+
+p{color:white;}
+
+
+#data-label-center {
+    font-size: 20px;
+    position: absolute;
+  }
+
+  .relative {
+    position: relative;
+  }
+  
+  .absolute-center {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+  
+  
+  .absolute-center h2{color:white}
+
+.absolute-center h3{
+    font-size:20px;
+    color:#03FFFF}
+
+  .absolute-center p{
+    margin-top:10px;
+    line-height:1.5em;
+    font-size:16px;}
