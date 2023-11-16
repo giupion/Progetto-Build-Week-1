@@ -40,6 +40,10 @@ h1+p{
     color: #0b113b;
 }
 
+span,button{
+    cursor: pointer;
+}
+
 div+p{
     color: white; 
     font-size: 16px;
