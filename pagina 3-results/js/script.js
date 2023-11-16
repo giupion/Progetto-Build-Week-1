@@ -88,7 +88,7 @@ var effectColors = {
    
 
  
-   console.log(graficoCiambella)
+   console.log(Chart)
 
 
   
