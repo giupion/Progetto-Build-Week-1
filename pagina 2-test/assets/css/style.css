@@ -11,12 +11,12 @@ body {
 header {
     text-align: left;
     width: auto;
+    padding-left: 6rem;
+    padding-top: 3rem;
 }
 
 #logo {
     height: 2rem;
-    margin-left: 10rem;
-    margin-top: 3rem;
     width: auto;
 }
 
@@ -53,12 +53,16 @@ main h2 span {
     display: inline-block;
     width: 20rem;
     height: auto;
-    margin: 0.5rem 0.8rem 0 0.8rem;
+    margin: 0.5rem 0.6rem 0 0.6rem;
     background-size: cover;
     background-color: rgb(255,255,255,0.1);
     padding: 1.3rem 0 1.3rem 0;
     border-radius: 2rem;
     text-align: center;
+}
+
+.test label:hover {
+    background-color: rgb(255,255,255,0.2);
 }
 
 input[type="radio"] {
@@ -70,6 +74,81 @@ input[type="radio"] {
     background: linear-gradient(180deg, rgba(210,0,148,1) 0%, rgba(144,0,128,1) 100%);
 }
 
+.test button {
+    display: block;
+    margin: 2rem auto 0 auto;
+    color:#0b113b;
+    background-color: #00FFFF;
+    border: none;
+    min-width: 120px;
+    height: auto;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+    padding: 1rem 1rem;
+    font-size:16px;
+}
+
+button:hover {
+    color: #0b113b;
+    box-shadow: 0 0px 15px #00FFFF;
+  }
+
+button:active {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0px 15px #00FFFF;
+  }
+
+.test input[type="number"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    background-size: cover;
+    background-color: rgb(255,255,255,0.1);
+    padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 2rem;
+  }
+
+.test .giusta {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    background-size: cover;
+    background-color: rgb(65, 134, 65, 0.5);
+    padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.test input[type="radio"]:checked+.giusta {
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgba(85, 199, 36,1) 0%, rgb(56, 113, 32) 100%);
+}
+
+.test .giusta {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    background-size: cover;
+    background-color: rgba(134, 65, 65, 0.5);
+    padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.test input[type="radio"]:checked+.giusta {
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgb(199, 36, 36) 0%, rgb(141, 22, 22) 100%);
+}
+
+  
+
 /*footer*/
 
 footer {
@@ -79,6 +158,7 @@ footer {
     font-family: 'outfit', sans-serif;
     letter-spacing: 0.2rem;
     font-weight: 600;
+    margin-bottom: 7rem;
 }
 
 footer p span {

@@ -57,3 +57,46 @@ border-color:white ;
 color: white;
 background-color: transparent;
 }
+
+p{color:white;}
+
+
+
+
+  .relative {
+    position: relative;
+  }
+  
+  .absolute-center {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+  
+  
+  .absolute-center h2{
+    font-size:22px;
+    color:white;
+    margin-bottom:5px;
+    font-family: 'Outfit', sans-serif;
+    }
+
+.absolute-center h3{
+    font-family: 'Outfit', sans-serif;
+    font-size:22px;
+    color:#03FFFF;
+    }
+
+  .absolute-center p{
+    font-family: 'Outfit', sans-serif;
+    margin-top:10px;
+    line-height:1.5em;
+    font-size:16px;
+font-weight: 100;}
+
+
