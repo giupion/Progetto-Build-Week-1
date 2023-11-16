@@ -177,14 +177,17 @@ function valutaRisposta(){
     try {
         let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
         if(rispostaUtente===domande[questionNumber].correct_answer){
+            document.querySelector('input[name="opzioni"]:checked+label').id="rispostaUtenteCorretta";
             console.log("risposta esatta")
             punteggioUtente++;
             main.innerHTML+=`
-            <p> Risposta esatta!</p>`
+            <p> Risposta esatta!</p>`;
+            
         
         }else{
+            document.querySelector('input[name="opzioni"]:checked+label').id="rispostaUtenteSbagliata";
             console.log("Risposta sbagliata");
-            main.innerHTML+=`<p> Risposta sbagliata</p>`
+            main.innerHTML+=`<p> Risposta sbagliata</p>`;
         }
     } catch (error) {
         console.log("Non hai risposto diocane")
