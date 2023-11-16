@@ -125,7 +125,9 @@ function mostraDomanda(){
         console.log("Sono nell'if");      
         let form = document.querySelector("form");   
         form.innerHTML=``;
+        let h2 = document.querySelector("h2");
         h2.innerHTML=domande[questionNumber].question;
+        console.log(domande[questionNumber].question);
         risposte = shuffleRisposte(domande[questionNumber]);
         for(let i=0; i<risposte.length;i++){
             form.innerHTML+=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
@@ -142,7 +144,7 @@ function mostraDomanda(){
         document.querySelector("#conferma").addEventListener("click",()=>{
             valutaRisposta();
         })
-        document.querySelector("footer").innerHTML=`<p>Question <span>${questionNumber}/${numDomande}</span></p>`;  
+        document.querySelector("footer").innerHTML=`<p>Question <span>${questionNumber+1}/${numDomande}</span></p>`;  
     } else{
 
     }
@@ -181,9 +183,7 @@ function valutaRisposta(){
             console.log("risposta esatta")
             punteggioUtente++;
             main.innerHTML+=`
-            <p> Risposta esatta!</p>`;
-            
-        
+            <p> Risposta esatta!</p>`;        
         }else{
             document.querySelector('input[name="opzioni"]:checked+label').id="rispostaUtenteSbagliata";
             console.log("Risposta sbagliata");
