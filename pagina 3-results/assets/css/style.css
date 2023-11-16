@@ -82,11 +82,15 @@ p{color:white;}
   }
   
   
-  .absolute-center h2{color:white}
+  .absolute-center h2{
+    font-size:30px;
+    color:white;
+    justify-content: space-evenly;}
 
 .absolute-center h3{
-    font-size:20px;
-    color:#03FFFF}
+    font-size:16px;
+    color:#03FFFF;
+    justify-content: space-evenly;}
 
   .absolute-center p{
     margin-top:10px;
