@@ -53,7 +53,7 @@ var effectColors = {
       
       cutoutPercentage: 50, 
       responsive: true, 
-      cutout: 140,
+      cutout: 150,
 
       elements: {
 
@@ -95,3 +95,15 @@ var effectColors = {
   /*label:`Congratulations!
    You passed the exam.`
    `We'll send you the certificate in few minutes.Check your email (including promotions/spam folder)`,*/
+
+
+  //ciambella//
+
+
+
+  // variabili in percentuale
+
+  let percentualeCorrette;
+
+  let percentualeSbagliate;
+
