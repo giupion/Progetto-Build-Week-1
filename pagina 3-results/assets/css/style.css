@@ -61,10 +61,7 @@ background-color: transparent;
 p{color:white;}
 
 
-#data-label-center {
-    font-size: 20px;
-    position: absolute;
-  }
+
 
   .relative {
     position: relative;
@@ -83,16 +80,23 @@ p{color:white;}
   
   
   .absolute-center h2{
-    font-size:30px;
+    font-size:22px;
     color:white;
-    justify-content: space-evenly;}
+    margin-bottom:5px;
+    font-family: 'Outfit', sans-serif;
+    }
 
 .absolute-center h3{
-    font-size:16px;
+    font-family: 'Outfit', sans-serif;
+    font-size:22px;
     color:#03FFFF;
-    justify-content: space-evenly;}
+    }
 
   .absolute-center p{
+    font-family: 'Outfit', sans-serif;
     margin-top:10px;
     line-height:1.5em;
-    font-size:16px;}
+    font-size:16px;
+font-weight: 100;}
+
+
