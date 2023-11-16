@@ -1,16 +1,51 @@
 
 
-let divstella=document.querySelectorAll("#stellina")
-for(i=0;)
+let stellina = document.querySelectorAll("span")
+console.log(stellina)
 
-li.addEventListener('click',IlluminaStella);
+for(let i =0;i<stellina.length;i++){
+    stellina[i].addEventListener("click",()=>{
+        for(let c=i;c>=0;c--){
+            stellina[c].style.color= "#00FFFF"
+        }
+
+    })
+}
 
 
-function IlluminaStella(event){
+
+
+
+
+
+
+
+
+
+
+
+
+/*stellina.forEach(ele=>{
+    ele.addEventListener("click" ,() => {
+      //console.log(eve.target )
+        ele.style.color= "#00FFFF"
+        //console.log(e.target)
+        colora
+    })
     
-    event.preventDefault();
-   
-    li.style.color = "red"
-    li.style.textDecoration="line-through";
-    
+})*/
+
+/*function colora (){
+    let i=0
+    let boolean= true
+    while(boolean && i<stellina.length ){
+        if(stellina[i].style.color!== "#00FFFF"){
+            stellina[i].style.color="#00FFFF"
+        }
+        else{
+            boolean=false
+        }
+        i++
+        console.log(i)
     }
+}*/
