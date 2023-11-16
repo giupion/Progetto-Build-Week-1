@@ -1,8 +1,5 @@
 
-
-
-
-    const questions = [
+const questions = [
     {
         category: "Science: Computers",
         type: "multiple",
@@ -100,36 +97,56 @@
         correct_answer: "Java",
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
-];
+]; 
+
 let punteggioUtente=0;
 let questionNumber = 0;
 let h2 = document.querySelector("h2");
 let form = document.querySelector("form");
 h2.innerText = "Seleziona il numero di domande:";
 let input= `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
-let bottoneNumero = ` <button type="button" onclick="mostraDomanda()">Inizia il test!</button>`;
+let bottoneNumero = ` <button type="button" onclick="iniziaTest()">Inizia il test!</button>`;
 form.innerHTML=input+bottoneNumero;
-let numDomande=Number(document.getElementById("numeroDomande").value);
-let domande = sottoArray (questions,numDomande);    
+let main = document.querySelector("main");
+let numDomande;
+let domande;
 
-let mostraDomanda=()=>{
+function iniziaTest(){
+    numDomande=Number(document.getElementById("numeroDomande").value);
+    console.log(numDomande);
+    domande=sottoArray (questions,numDomande);
+    mostraDomanda();
+}
+
+function mostraDomanda(){    
+    console.log("sono in mostra domanda");
     let risposte=[];
-    if(questionNumber<numDomande){             
-        form.innerHTML=` <button type="button" id="conferma">Conferma</button>`;
+    if(questionNumber<numDomande){    
+        console.log("Sono nell'if");      
+        let form = document.querySelector("form");   
+        form.innerHTML=``;
         h2.innerHTML=domande[questionNumber].question;
         risposte = shuffleRisposte(domande[questionNumber]);
         for(let i=0; i<risposte.length;i++){
-            form.innerHTML=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
-                              <label for="risposta ${i+1}">${risposte[i]}</label>`+form.innerHTML;
+            form.innerHTML+=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
+                              <label for="risposta ${i+1}"><p>${risposte[i]}<p></label>`;
         }
         console.log(`domanda ${questionNumber+1}`);
+        form.innerHTML=`<button type="button" id="conferma">Conferma</button>`+form.innerHTML;
+        document.querySelectorAll("input").forEach(ele => {
+            ele.addEventListener("click",()=>{
+                valutaRisposta();
+            })
+        });
+           
         document.querySelector("#conferma").addEventListener("click",()=>{
             valutaRisposta();
-        })            
+        })
+        document.querySelector("footer").innerHTML=`<p>Question <span>${questionNumber}/${numDomande}</span></p>`;  
+    } else{
+
     }
 }
-
-
 
 function sottoArray(arr,n){
     let sottoArray =[];
@@ -140,33 +157,51 @@ function sottoArray(arr,n){
     return sottoArray;
 }
 
-let shuffleRisposte=(domanda)=>{
+function shuffleRisposte(domanda){
     console.log(domanda)
     let risposte = [domanda.correct_answer,...domanda.incorrect_answers];
     console.log(risposte)
     return sottoArray(risposte,risposte.length);
 }
 
-
-
-
-
-let valutaRisposta=()=>{
-    console.log("sono in valutaRisposta()");
-    document.querySelector("#conferma").removeEventListener("click",()=>{
-        valutaRisposta()
+function valutaRisposta(){
+    console.log("sono in valutaRisposta()"); 
+    let opzioni = document.querySelectorAll("label");
+    opzioni.forEach(ele => {
+        if(ele.innerText==domande[questionNumber].correct_answer){
+            ele.classList.add("corretta");
+        }else{
+            ele.classList.add("sbagliata");
+        }        
     });
-    let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
-    console.log(typeof rispostaUtente)
-    if(rispostaUtente===domande[questionNumber].correct_answer){
-        console.log("risposta esatta")
-        punteggioUtente++;
-    }else{
-        console.log("Risposta sbagliata");
+    try {
+        let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
+        if(rispostaUtente===domande[questionNumber].correct_answer){
+            console.log("risposta esatta")
+            punteggioUtente++;
+            main.innerHTML+=`
+            <p> Risposta esatta!</p>`
+        
+        }else{
+            console.log("Risposta sbagliata");
+            main.innerHTML+=`<p> Risposta sbagliata</p>`
+        }
+    } catch (error) {
+        console.log("Non hai risposto diocane")
+        main.innerHTML+=`<p> Non hai risposto diocane</p>`
     }
+    
     questionNumber++;
-    mostraDomanda();
+    setTimeout(function() {
+        mostraDomanda();
+        main.removeChild(document.querySelector("main>p"))
+    }, 2000);    
+    
 }
+
+
+
+
 
 
 /*

@@ -49,14 +49,36 @@ main h2 span {
     color: white;
 }
 
-.test label {
+/*.test label {
     display: inline-block;
     width: 20rem;
     height: auto;
     margin: 0.5rem 0.6rem 0 0.6rem;
     background-size: cover;
-    background-color: rgb(255,255,255,0.1);
+    background: rgb(255,255,255,0.1);
     padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    border: 2px, solid;
+}*/
+
+.test label {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.1rem;
+    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
+    background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );*/
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(10%, rgba(255, 255, 255, 0.05)), color-stop(70%, rgba(255, 255, 255, 0.4)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background-image: -moz-linear-gradient(center bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.8) 100%);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.test label p {
+    padding: 1.2rem 0 1.2rem 0;
+    background: rgb(0, 0, 0, 0.2);
     border-radius: 2rem;
     text-align: center;
 }
