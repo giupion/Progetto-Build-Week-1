@@ -129,7 +129,7 @@ function mostraDomanda(){
         risposte = shuffleRisposte(domande[questionNumber]);
         for(let i=0; i<risposte.length;i++){
             form.innerHTML+=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
-                              <label for="risposta ${i+1}">${risposte[i]}</label>`;
+                              <label for="risposta ${i+1}"><p>${risposte[i]}<p></label>`;
         }
         console.log(`domanda ${questionNumber+1}`);
         form.innerHTML=`<button type="button" id="conferma">Conferma</button>`+form.innerHTML;
@@ -194,7 +194,7 @@ function valutaRisposta(){
     questionNumber++;
     setTimeout(function() {
         mostraDomanda();
-        main.removeChild(document.querySelector("main p"))
+        main.removeChild(document.querySelector("main>p"))
     }, 2000);    
     
 }
