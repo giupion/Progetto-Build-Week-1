@@ -27,6 +27,12 @@ main {
     width: auto;
 }
 
+main p {
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
@@ -67,34 +73,82 @@ main h2 span {
     width: 20rem;
     height: auto;
     margin: 0.5rem 0.6rem 0 0.6rem;
-    padding: 0.1rem;
-    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
-    background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );*/
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(10%, rgba(255, 255, 255, 0.05)), color-stop(70%, rgba(255, 255, 255, 0.4)), color-stop(100%, rgba(255, 255, 255, 1)));
-    background-image: -moz-linear-gradient(center bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.8) 100%);
+    padding: 0.2rem;
+    /*background: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
+    background: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );
+    background-color: transparent;*/
+    background: rgb(255,255,255);
+    background: linear-gradient(175deg, rgba(255,255,255,0.9) 10%, rgba(255, 255, 255, 0.1) 90%);
     border-radius: 2rem;
     text-align: center;
 }
 
 .test label p {
-    padding: 1.2rem 0 1.2rem 0;
-    background: rgb(0, 0, 0, 0.2);
+    padding: 1.3rem 0 1.3rem 0;
+    background: linear-gradient(175deg, rgba(22, 4, 57, 0.9) 10%, rgba(30, 6, 66, 0.4) 90%);
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.test label:hover {
+    background-color: rgb(255,255,255,0.1);
+}
+
+.test .corretta, .test .corretta:hover {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.2rem;
+    background-image: none;
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgb(32, 97, 4) 0%, rgb(21, 69, 1) 100%);
     border-radius: 2rem;
     text-align: center;
 }
 
-.test label:hover {
-    background-color: rgb(255,255,255,0.2);
+.test .corretta p, .test .sbagliata p {
+    padding: 1.3rem 0 1.3rem 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.test #rispostaUtenteCorretta {
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgba(85, 199, 36,1) 0%, rgb(56, 113, 32) 100%);
+}
+
+.test .sbagliata, .test .sbagliata:hover {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.2rem;
+    background-image: none;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgb(135, 4, 4) 0%, rgb(69, 2, 2) 100%);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+
+
+.test #rispostaUtenteSbagliata  {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgb(238, 28, 28) 0%, rgb(170, 14, 14) 100%);
 }
 
 input[type="radio"] {
     display: none;
 }
 
-.test input[type="radio"]:checked+label {
+/*.test input[type="radio"]:checked+label {
     background: rgb(210,0,148);
     background: linear-gradient(180deg, rgba(210,0,148,1) 0%, rgba(144,0,128,1) 100%);
-}
+}*/
 
 .test button {
     display: block;
@@ -134,40 +188,6 @@ button:active {
     color: white;
     font-size: 2rem;
   }
-
-.test .giusta {
-    display: inline-block;
-    width: 20rem;
-    height: auto;
-    margin: 0.5rem 0.6rem 0 0.6rem;
-    background-size: cover;
-    background-color: rgb(65, 134, 65, 0.5);
-    padding: 1.3rem 0 1.3rem 0;
-    border-radius: 2rem;
-    text-align: center;
-}
-
-.test input[type="radio"]:checked+.giusta {
-    background: rgb(85, 199, 36);
-    background: linear-gradient(180deg, rgba(85, 199, 36,1) 0%, rgb(56, 113, 32) 100%);
-}
-
-.test .giusta {
-    display: inline-block;
-    width: 20rem;
-    height: auto;
-    margin: 0.5rem 0.6rem 0 0.6rem;
-    background-size: cover;
-    background-color: rgba(134, 65, 65, 0.5);
-    padding: 1.3rem 0 1.3rem 0;
-    border-radius: 2rem;
-    text-align: center;
-}
-
-.test input[type="radio"]:checked+.giusta {
-    background: rgb(85, 199, 36);
-    background: linear-gradient(180deg, rgb(199, 36, 36) 0%, rgb(141, 22, 22) 100%);
-}
 
   
 

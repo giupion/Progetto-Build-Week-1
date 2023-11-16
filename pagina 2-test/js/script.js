@@ -125,11 +125,13 @@ function mostraDomanda(){
         console.log("Sono nell'if");      
         let form = document.querySelector("form");   
         form.innerHTML=``;
+        let h2 = document.querySelector("h2");
         h2.innerHTML=domande[questionNumber].question;
+        console.log(domande[questionNumber].question);
         risposte = shuffleRisposte(domande[questionNumber]);
         for(let i=0; i<risposte.length;i++){
             form.innerHTML+=` <input type="radio" id="risposta ${i+1}" name="opzioni" />
-                              <label for="risposta ${i+1}"><p>${risposte[i]}<p></label>`;
+                              <label for="risposta ${i+1}"><p>${risposte[i]}</p></label>`;
         }
         console.log(`domanda ${questionNumber+1}`);
         form.innerHTML=`<button type="button" id="conferma">Conferma</button>`+form.innerHTML;
@@ -142,7 +144,7 @@ function mostraDomanda(){
         document.querySelector("#conferma").addEventListener("click",()=>{
             valutaRisposta();
         })
-        document.querySelector("footer").innerHTML=`<p>Question <span>${questionNumber}/${numDomande}</span></p>`;  
+        document.querySelector("footer").innerHTML=`<p>Question <span>${questionNumber+1}/${numDomande}</span></p>`;  
     } else{
 
     }
@@ -177,14 +179,15 @@ function valutaRisposta(){
     try {
         let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
         if(rispostaUtente===domande[questionNumber].correct_answer){
+            document.querySelector('input[name="opzioni"]:checked+label').id="rispostaUtenteCorretta";
             console.log("risposta esatta")
             punteggioUtente++;
             main.innerHTML+=`
-            <p> Risposta esatta!</p>`
-        
+            <p> Risposta esatta!</p>`;        
         }else{
+            document.querySelector('input[name="opzioni"]:checked+label').id="rispostaUtenteSbagliata";
             console.log("Risposta sbagliata");
-            main.innerHTML+=`<p> Risposta sbagliata</p>`
+            main.innerHTML+=`<p> Risposta sbagliata</p>`;
         }
     } catch (error) {
         console.log("Non hai risposto diocane")
