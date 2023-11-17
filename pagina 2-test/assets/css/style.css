@@ -4,6 +4,7 @@ body {
     background-image: url(../../../assets-immagini/bg.jpg);
     background-size: cover;
     background-repeat: repeat;
+    text-align: center;
 }
 
 /*header*/
@@ -12,6 +13,7 @@ header {
     width: 100%;
     height: 15rem;
     text-align: justify;
+
 }
 
 #logo {
@@ -32,7 +34,7 @@ header {
 /*timer*/
 
 #app {
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: auto;
     display: inline-block;
@@ -54,28 +56,59 @@ header {
   }
 
   .base-timer__path-elapsed {
-    stroke-width: 7px;
+    stroke-width: 10px;
     stroke: grey;
   }
 
   .base-timer__label {
     position: absolute;
-    
-    /* Size should match the parent container */
     width: 15rem;
     height: 15rem;
-    
-    /* Keep the label aligned to the top */
-    top: 0;
-    
-    /* Create a flexible box that centers content vertically and horizontally */
+    top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-    /* Sort of an arbitrary number; adjust to your liking */
-    font-size: 3rem;
+    font-size: 6rem;
+    font-family: 'Outfit', sans-serif;
+    color: white;
   }
+
+  .timer_text1, .timer_text2 {
+    position: absolute;
+    display: block;
+    font-size: 1rem;
+  }
+
+  .timer_text1 {
+    top: 4rem;
+  }
+
+  .timer_text2 {
+    bottom: 4rem;
+  }
+
+  .base-timer__path-remaining {
+  stroke-width: 10px;
+  stroke-linecap: square;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: currentColor;
+}
+
+
+
+.base-timer__path-remaining.green {
+  color: rgb(0, 255, 255);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
 
 /*main*/
 
@@ -88,14 +121,14 @@ main > p {
     margin-top: 3rem;
     font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 600;
 }
 
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
-    font-size: 3rem;
+    font-size: 50px;
     max-width: 50rem;
     margin: 7rem auto 3rem auto;
 }
@@ -248,6 +281,7 @@ button:active {
     border: none;
     color: white;
     font-size: 3rem;
+    font-family: 'Outfit', sans-serif;
   }
 
   

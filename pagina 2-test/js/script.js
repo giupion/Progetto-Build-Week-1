@@ -23,7 +23,7 @@ let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("app").innerHTML = `
-<button type="button">Inizia il countodown</button>
+<!--<button type="button">Inizia il countodown</button>-->
 <div class="base-timer">
   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g class="base-timer__circle">
@@ -41,15 +41,20 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
+  
+  <span id="base-timer-label" class="base-timer__label">
+  ${formatTime(
     timeLeft
-  )}</span>
+  )}
+  </span>
+  
 </div>
 `;
-document.querySelector("button").addEventListener("click",()=>{
+/*document.querySelector("button").addEventListener("click",()=>{
    startTimer();
-});
+});*/
 
+startTimer()
 
 const questions = [
     {
@@ -294,7 +299,9 @@ function formatTime(time) {
     seconds = `0${seconds}`;
   }
 
-  return `${seconds}`;
+  return `<p class="timer_text1">SECONDS</p>
+  ${seconds}
+  <p class="timer_text2">REMAINING</p>`;
 }
 
 function setRemainingPathColor(timeLeft) {
