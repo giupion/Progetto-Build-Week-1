@@ -4,20 +4,110 @@ body {
     background-image: url(../../../assets-immagini/bg.jpg);
     background-size: cover;
     background-repeat: repeat;
+    text-align: center;
 }
 
 /*header*/
 
 header {
-    text-align: left;
-    width: auto;
-    padding-left: 6rem;
-    padding-top: 3rem;
+    width: 100%;
+    height: 15rem;
+    text-align: justify;
+
 }
 
 #logo {
-    height: 2rem;
+    height: 2.5rem;
     width: auto;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin-left: 6rem;
+    margin-top: 3rem;
+}
+
+.spacer {
+    width: 100%;
+    display: inline-block;
+}
+
+/*timer*/
+
+#app {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    padding: 5rem;
+    box-sizing: content-box;
+}
+
+.base-timer {
+    width: 15rem;
+    height: 15rem;
+    box-sizing: content-box;
+  }
+
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+
+  .base-timer__path-elapsed {
+    stroke-width: 10px;
+    stroke: grey;
+  }
+
+  .base-timer__label {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+  }
+
+  .timer_text1, .timer_text2 {
+    position: absolute;
+    display: block;
+    font-size: 1rem;
+  }
+
+  .timer_text1 {
+    top: 4rem;
+  }
+
+  .timer_text2 {
+    bottom: 4rem;
+  }
+
+  .base-timer__path-remaining {
+  stroke-width: 10px;
+  stroke-linecap: square;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: currentColor;
+}
+
+
+
+.base-timer__path-remaining.green {
+  color: rgb(0, 255, 255);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
 }
 
 /*main*/
@@ -27,10 +117,18 @@ main {
     width: auto;
 }
 
+main > p {
+    margin-top: 3rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
-    font-size: 3rem;
+    font-size: 50px;
     max-width: 50rem;
     margin: 7rem auto 3rem auto;
 }
@@ -49,30 +147,101 @@ main h2 span {
     color: white;
 }
 
-.test label {
+/*.test label {
     display: inline-block;
     width: 20rem;
     height: auto;
     margin: 0.5rem 0.6rem 0 0.6rem;
     background-size: cover;
-    background-color: rgb(255,255,255,0.1);
+    background: rgb(255,255,255,0.1);
     padding: 1.3rem 0 1.3rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    border: 2px, solid;
+}*/
+
+.test label {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.2rem;
+    /*background: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
+    background: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );
+    background-color: transparent;*/
+    /*background: rgb(255,255,255);
+    background: linear-gradient(175deg, rgba(255,255,255,0.9) 10%, rgba(255, 255, 255, 0.1) 90%);*/
+    box-shadow: inset 2px 2px 3px rgba(255,255,255,0.7), inset 0 2px 3px rgba(255, 255, 255, 0.3);
     border-radius: 2rem;
     text-align: center;
 }
 
+.test label p {
+    padding: 1.3rem 0 1.3rem 0;
+    background: rgb(255,255,255,0.05);
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
 .test label:hover {
-    background-color: rgb(255,255,255,0.2);
+    background-color: rgb(255,255,255,0.1);
+}
+
+.test .corretta, .test .corretta:hover {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.2rem;
+    background-image: none;
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgb(32, 97, 4, 0.5) 0%, rgb(21, 69, 1, 0.5) 100%);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.test .corretta p, .test .sbagliata p {
+    padding: 1.3rem 0 1.3rem 0;
+    background: rgb(255,255,255,0.05);
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.test #rispostaUtenteCorretta {
+    background: rgb(85, 199, 36);
+    background: linear-gradient(180deg, rgba(85, 199, 36) 0%, rgb(56, 113, 32) 100%);
+}
+
+.test .sbagliata, .test .sbagliata:hover {
+    display: inline-block;
+    width: 20rem;
+    height: auto;
+    margin: 0.5rem 0.6rem 0 0.6rem;
+    padding: 0.2rem;
+    background-image: none;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgb(135, 4, 4, 0.5) 0%, rgb(69, 2, 2, 0.5) 100%);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+
+
+.test #rispostaUtenteSbagliata  {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgb(238, 28, 28) 0%, rgb(170, 14, 14) 100%);
 }
 
 input[type="radio"] {
     display: none;
 }
 
-.test input[type="radio"]:checked+label {
+/*.test input[type="radio"]:checked+label {
     background: rgb(210,0,148);
     background: linear-gradient(180deg, rgba(210,0,148,1) 0%, rgba(144,0,128,1) 100%);
-}
+}*/
 
 .test button {
     display: block;
@@ -104,48 +273,16 @@ button:active {
     height: auto;
     margin: 0.5rem 0.6rem 0 0.6rem;
     background-size: cover;
-    background-color: rgb(255,255,255,0.1);
+    background-color: rgb(255,255,255,0.05);
+    box-shadow: inset 2px 2px 3px rgba(255,255,255,0.7), inset 0 2px 3px rgba(255, 255, 255, 0.3);
     padding: 1.3rem 0 1.3rem 0;
     border-radius: 2rem;
     text-align: center;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'Outfit', sans-serif;
   }
-
-.test .giusta {
-    display: inline-block;
-    width: 20rem;
-    height: auto;
-    margin: 0.5rem 0.6rem 0 0.6rem;
-    background-size: cover;
-    background-color: rgb(65, 134, 65, 0.5);
-    padding: 1.3rem 0 1.3rem 0;
-    border-radius: 2rem;
-    text-align: center;
-}
-
-.test input[type="radio"]:checked+.giusta {
-    background: rgb(85, 199, 36);
-    background: linear-gradient(180deg, rgba(85, 199, 36,1) 0%, rgb(56, 113, 32) 100%);
-}
-
-.test .giusta {
-    display: inline-block;
-    width: 20rem;
-    height: auto;
-    margin: 0.5rem 0.6rem 0 0.6rem;
-    background-size: cover;
-    background-color: rgba(134, 65, 65, 0.5);
-    padding: 1.3rem 0 1.3rem 0;
-    border-radius: 2rem;
-    text-align: center;
-}
-
-.test input[type="radio"]:checked+.giusta {
-    background: rgb(85, 199, 36);
-    background: linear-gradient(180deg, rgb(199, 36, 36) 0%, rgb(141, 22, 22) 100%);
-}
 
   
 

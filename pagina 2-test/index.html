@@ -10,14 +10,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
 </head>
 <body>
-    <div class="conntainer"></div>
+<div class="conntainer">
     <header>
         <!-- contenitore logo e SOLO IN QUESTO CASO del timer-->
         <img id="logo" src="../assets-immagini/epicode_logo.png" alt="logo_di_epicode">
-        <!-- PLACEHOLDER DEL TIMER -->
-        <section>
-            <div id="timerPlaceholder"></div>
-        </section>
+        <div class="spacer"></div>
+        <div id="app">
+            <!-- Il contenuto di questa section verrà commentato in quanto saràeseguito
+            da JS-->
+            <!--<div class="base-timer">
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <g class="base-timer__circle">
+                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+                  </g>
+                </svg>
+                <span>
+                </span>
+              </div>-->
+        </div>
     </header>
     <main>
         <h2 class="domanda">
@@ -31,22 +41,22 @@
             per lasciarlo generare in JS, CONTROLLA LE CLASSI PER
             FAR COMBACIARE IL CSS-->
             <!--<input type="radio" id="risposta 1" name="opzioni">
-            <label for="risposta 1">Opzione1</label>
+            <label for="risposta 1"><p>Opzione1</p></label>
 
             <input type="radio" id="risposta 2" name="opzioni">
-            <label for="risposta 2">Opzione2</label>
+            <label for="risposta 2"><p>Opzione2</p></label>
 
             <input type="radio" id="risposta 3" name="opzioni">
-            <label for="risposta 3">Opzione3</label>
+            <label for="risposta 3"><p>Opzione3</p></label>
 
             <input type="radio" id="risposta 4" name="opzioni">
-            <label for="risposta 4">Opzione4</label>-->
+            <label for="risposta 4"><p>Opzione4</p></label>-->
         </form>
     </main>
     <footer class="paginaDomande">
-            <p>QUESTION <span>1/10</span></p>
-    </footer>
 
+    </footer>
+</div>
     
 
     <script src="js/script.js"></script>
