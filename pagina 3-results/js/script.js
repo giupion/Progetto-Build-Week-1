@@ -164,7 +164,7 @@ var effectColors = {
       
       cutoutPercentage: 50, 
       responsive: true, 
-      cutout: 130,
+      cutout: 140,
 
       elements: {
 
