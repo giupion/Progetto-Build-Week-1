@@ -124,6 +124,7 @@ const questions = [
 let punteggioUtente = 0;
 let questionNumber = 0;
 let h2 = document.querySelector("h2");
+let pFeedback = document.querySelector("p");
 let form = document.querySelector("form");
 h2.innerText = "Seleziona il numero di domande:";
 let input = `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
@@ -229,16 +230,15 @@ function valutaRisposta() {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteCorretta";
             console.log("risposta esatta")
             punteggioUtente++;
-            main.innerHTML += `
-            <p> Risposta esatta!</p>`;
+            pFeedback.innerText += `Risposta esatta!`;
         } else {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteSbagliata";
             console.log("Risposta sbagliata.");
-            main.innerHTML += `<p> Risposta sbagliata.</p>`;
+            pFeedback.innerText += `Risposta sbagliata.`;
         }
     } catch (error) {
         console.log("Non hai risposto!")
-        main.innerHTML += `<p> Non hai risposto!</p>`
+        pFeedback.innerText += `Non hai risposto!`
     }
 
     questionNumber++;
