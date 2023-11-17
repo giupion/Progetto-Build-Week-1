@@ -162,6 +162,7 @@ var effectColors = {
     
       plugins: {
         legend: false,
+
     }
     
     },
@@ -193,7 +194,7 @@ var effectColors = {
   };
 
  
-   console.log(Chart)
+   console.log(Chart())
 
 
 
