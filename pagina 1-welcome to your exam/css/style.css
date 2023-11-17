@@ -1,165 +1,214 @@
 *,html{
-  margin:0 auto;
-color: antiquewhite;
-
-  text-decoration: none;
-  font-family: 'Outfit', sans-serif;
-
-
-
+ margin:0 auto;
+ color: #E7E7EC;
+ text-decoration: none;
+ font-family: 'Inter', sans-serif;
+ 
 }
 
 
-
-body{background-image: url("../assets-immagini/bg.jpg") ;
-    background-size:cover;
-
-margin-left: 250px;
-
+body{
+background-image: url("../assets-immagini/bg.jpg") ;
+background-size:cover;
+margin-left: 130px; 
 }
 
-.container{text-align: left;
+
+.container{
+  
+text-align: left;
 margin:0 auto;
 width:100%
 
+}
+
+
+
+
+.EpicodeLogo{
+  height: 40px;
+  
+margin-top: 40px;
+}
+
+
+
+
+ h1{font-size: 60px;
+ font-weight: bolder;
+ margin-bottom: 50px;
+ font-family: 'Outfit', sans-serif;
+ margin-top: -15px;
+}
+
+
+h3{
+  margin-top: 80px;
+  font-size: 60px;
+ font-family: 'Outfit', sans-serif;
+
 
 }
 
 
-  .EpicodeLogo{text-align: left;
-  margin-bottom: 50px;
-  
+h2{font-size: 25px;
+ margin-bottom: 10px;
+font-weight: bold;
+font-family: 'Outfit', sans-serif;
+
+
 }
 
 
-  h1{font-size: 60px;
-  font-weight: bold;
-  margin-bottom: 50px;
 
+
+ p{margin-bottom:45px;
+ font-size:16px;
+ line-height: 1.5em;
+color: #CACBD2;
 }
 
-h3{font-size: 60px;;}
-
-h2{font-size: 30px;
-  margin-bottom: 30px;
-font-weight: bold;}
 
 
-  p{margin-bottom:50px;
-  font-size:16px;
-  line-height: 1.5em;}
 
 
-  
 
-  ul{padding-inline-start: 30px;
-      margin-bottom:50px;}
+ ul{padding-inline-start:25px;
+     margin-bottom:50px;
+     color: #CACBD2;}
 
-      li{
-          line-height: 1.5em;
-          font-size:16px;}
 
-  
-    
+     li{
+         line-height: 1.5em;
+         font-size:16px;}
+
+
+   
 a{color:#0b113b;}
 
-  h2{color:#D20094;}
 
-  span{font-weight: bold;}
+ h2{color:#C2138E;}
 
+
+ span{font-weight: bold;}
+
+
+
+
+ .glow-button:hover {
+     color: rgba(255, 255, 255, 1);
+     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+   }
+ 
+
+
+ 
+
+
+
+
+   form {
+     margin: 1rem auto;
+     max-width: 750px;
+ }
+
+
+
+
+ .wrapper {
+   position: relative;
+   margin-bottom: 1rem;
+   margin-top: 1rem;
   
-
-  .glow-button:hover {
-      color: rgba(255, 255, 255, 1);
-      box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-    }
-   
-
-   
-
-
-    form {
-      margin: 1rem auto;
-      max-width: 750px;
-  }
-
-
-  .wrapper {
-    position: relative;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    
 }
+
+
+
+
 
 
 
 
 .wrapper input {
 
-	opacity: 0;
-	position: absolute;
-	top: 0;
+
+ opacity: 0;
+ position: absolute;
+ top: 0;
 width:0;
 height:0;
+
 
 }
 /*selezioanto solo primo label vicino input*/
 .wrapper input + label::before {
-	border: 3px solid ;
-	content: "";
-	height: 10px;
-	left: -50px;
-	position: absolute;
-	border:content-box;
-	width: 10px;
-  top: 23px;
-	left: -20px;
+ border: 2.5px solid ;
+ content: "";
+ height: 15px;
+ position: absolute;
+ border:content-box;
+ width: 15px;
+ left: 0px;
+ top: -2.5px;
 }
 
+
 .wrapper input + label::after {
-	content: "";
-	border: 2px solid;
-	border-left: 0;
-	border-top: 0;
-	height: 9px;
-	left: -19px;
-	opacity: 0;
-	position: absolute;
-	top: 20px;
-	transform: rotate(45deg);
-	transition: opacity 0.2s ease-in-out;
-	width: 11px;
+ content: "";
+ border: 2.5px solid;
+ border-left: 0;
+ border-top: 0;
+ height: 9px;
+ left: 2px;
+ opacity: 0;
+ position: absolute;
+ transform: rotate(45deg);
+ transition: opacity 0.2s ease-in-out;
+ width: 11px;
 }
+
 
 .wrapper input:checked + label::after {
 opacity: 1;
 }
 
 
+label{
+ position: absolute;
+padding-left: 40px;
+top:50px;
+}
+
+
 button{
-        
+
 color:#0b113b;
 background-color: #00FFFF;
 border: none;
-margin-left: 80px;
-width: 120px;
-height: 40px;
+margin-left: 600px;
+margin-top: 30px;
+width: 190px;
+height:35px;
 font-weight: bolder;
 transition: all 0.2s ease-in-out;
-padding-bottom: 40px;
-padding-top:20px;
+padding-bottom: 35px;
+padding-top:15px;
 padding-left:20px;
 padding-right:20px;
-font-size:16px;
-} 
+font-size:20px;
+
+}
+
+
 
 
 .glow-button:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+ color: rgba(255, 255, 255, 1);
+ box-shadow:0px 0px 8px 2px rgba(145, 92, 182, .4);
 }
+
 
 *::before,
 *::after {
-  box-sizing: inherit;
+ box-sizing: inherit;
 }
