@@ -187,7 +187,7 @@ function mostraDomanda() {
         });
         document.querySelector("footer").innerHTML = `<p>QUESTION <span>${questionNumber + 1}/${numDomande}</span></p>`;
         startTimer();
-    } else {        
+    } else {
         main.innerHTML = `
                                 <div class="container">
                         <div id="title">
@@ -218,107 +218,108 @@ function mostraDomanda() {
                         </div>
                         </div>
                                 `
-        document.querySelector("footer").innerHTML=`
-        <button type="button" class="pagina3"><a href="../pagina 4-review/index.html" >rate us</a></button>
+        document.querySelector("footer").innerHTML = `
+        <button type="button" class="pagina3" ><a href="../pagina 4-review/index.html" class="pagina3">RATE US</a></button>
         `
-        document.querySelector("footer").classList.add="footerPagina3";
-        document.querySelector("#numeroCorrette").innerText=String((punteggioUtente*100/numDomande).toFixed(1))+"%";
-        document.querySelector("#numeroSbagliate").innerText=String(((numDomande-punteggioUtente)*100/numDomande).toFixed(1))+"%";
-        document.querySelector("#testoCorrette").innerText=`${punteggioUtente}/${numDomande} questions`;
-        document.querySelector("#testoSbagliate").innerText=`${numDomande-punteggioUtente}/${numDomande} questions`;
-        if(punteggioUtente/numDomande>=0.6){
-            document.querySelector( "#Congra").innerText="Congratulations!";
-            document.querySelector("#youPassed").innerText="You passed the test!"
-            document.querySelector( "#certificate").innerText="We send you the certificate in few minute";
-        }else{
-            document.querySelector( "#Congra").innerText="Sorry!";
-            document.querySelector("#youPassed").innerText="Unfurtunately you didn't passed the test.";
-            document.querySelector( "#certificate").innerText="Try again! not blame yourself and keep pushing!";
+        document.querySelector("footer").classList.add = "footerPagina3";
+        document.querySelector("#numeroCorrette").innerText = String((punteggioUtente * 100 / numDomande).toFixed(1)) + "%";
+        document.querySelector("#numeroSbagliate").innerText = String(((numDomande - punteggioUtente) * 100 / numDomande).toFixed(1)) + "%";
+        document.querySelector("#testoCorrette").innerText = `${punteggioUtente}/${numDomande} questions`;
+        document.querySelector("#testoSbagliate").innerText = `${numDomande - punteggioUtente}/${numDomande} questions`;
+        if (punteggioUtente / numDomande >= 0.6) {
+            document.querySelector("#Congra").innerText = "Congratulations!";
+            document.querySelector("#youPassed").innerText = "You passed the test!"
+            document.querySelector("#certificate").innerText = "We send you the certificate in few minute";
+        } else {
+            document.querySelector("#Congra").innerText = "Sorry!";
+            document.querySelector("#youPassed").innerText = "Unfurtunately you didn't passed the test.";
+            document.querySelector("#certificate").innerText = "Try again! not blame yourself and keep pushing!";
         }
         let nodo = document.querySelector('#risultati').getContext('2d');
         var effectColors = {
             highlight: 'rgba(0, 0, 0, 0.75)',
             shadow: 'rgba(0, 255, 255, 0.5)',
-            glow: 'rgb(255, 255, 0)'	
+            glow: 'rgb(255, 255, 0)'
         };
         let graficoCiambella = new Chart(nodo, {
             type: 'doughnut',
-           
-            data : {
-              labels: [
-                'Wrong',
-                'Correct',
-                
-              ],
-              datasets: [{
-                data: [((numDomande-punteggioUtente)*100/numDomande).toFixed(1),(punteggioUtente*100/numDomande).toFixed(1)], 
-                backgroundColor: ["#C1138C","#03FFFF" ],
-                
-                
-                
-              }],
-              
-              
+            data: {
+                labels: [
+                    'Wrong',
+                    'Correct',
+                ],
+                datasets: [{
+                    data: [((numDomande - punteggioUtente) * 100 / numDomande).toFixed(1), (punteggioUtente * 100 / numDomande).toFixed(1)],
+                    backgroundColor: ["#C1138C", "#03FFFF"],
+
+
+
+                }],
+
+
             },
-           
-            options:{
-        
-              
-              cutoutPercentage: 50, 
-              responsive: true, 
-              cutout: 140,
-        
-              elements: {
-        
-                
-                arc: {
-                  borderWidth: 1, 
-                  borderColor:'#333',
-        
-                  prototype:{draw:{shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 10,
-                    shadowColor: effectColors.shadow,
-                    bevelWidth: 2,
-                    bevelHighlightColor: effectColors.highlight,
-                    bevelShadowColor: effectColors.shadow}}
-                  
-                }
-              },
-            
-              plugins: {
-                legend: false,
-            }
-            
-            },
-        
-            tooltips: {
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 10,
-                    shadowColor: effectColors.shadow,
-                    bevelWidth: 2,
-                    bevelHighlightColor: effectColors.highlight,
-                    bevelShadowColor: effectColors.shadow
+
+            options: {
+
+
+                cutoutPercentage: 50,
+                responsive: true,
+                cutout: 140,
+
+                elements: {
+
+
+                    arc: {
+                        borderWidth: 1,
+                        borderColor: '#333',
+
+                        prototype: {
+                            draw: {
+                                shadowOffsetX: 3,
+                                shadowOffsetY: 3,
+                                shadowBlur: 10,
+                                shadowColor: effectColors.shadow,
+                                bevelWidth: 2,
+                                bevelHighlightColor: effectColors.highlight,
+                                bevelShadowColor: effectColors.shadow
+                            }
+                        }
+
+                    }
                 },
-        
-            
-          }        
-          );
-           
-        
-          const ShadowPlugin = {
-            beforeDraw: (chart, args, options) => {
-              const { ctx } = chart;
-              ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
-              ctx.shadowBlur = 10;
-              ctx.shadowOffsetX = 5;
-              ctx.shadowOffsetY = 5;
+
+                plugins: {
+                    legend: false,
+                }
+
             },
-          };
-        
-          graficoCiambella;
-        
+
+            tooltips: {
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 10,
+                shadowColor: effectColors.shadow,
+                bevelWidth: 2,
+                bevelHighlightColor: effectColors.highlight,
+                bevelShadowColor: effectColors.shadow
+            },
+
+
+        });
+
+
+        const ShadowPlugin = {
+            beforeDraw: (chart, args, options) => {
+                const { ctx } = chart;
+                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                ctx.shadowBlur = 10;
+                ctx.shadowOffsetX = 5;
+                ctx.shadowOffsetY = 5;
+            },
+        };
+
+        graficoCiambella;
+
 
 
     }
