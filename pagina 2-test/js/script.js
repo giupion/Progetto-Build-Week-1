@@ -244,7 +244,7 @@ function valutaRisposta() {
     questionNumber++;
     setTimeout(function () {
         mostraDomanda();
-        pFeedback.innerText += ``;
+        pFeedback.innerText = ``;
     }, 2000);
 
 }
