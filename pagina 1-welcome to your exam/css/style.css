@@ -212,3 +212,10 @@ font-size:20px;
 *::after {
  box-sizing: inherit;
 }
+
+
+
+/*button:active {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0px 15px #00FFFF;
+}/*
