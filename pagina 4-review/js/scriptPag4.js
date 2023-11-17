@@ -20,3 +20,9 @@ for(let i =0;i<stellina.length;i++){
         }
     })
 }
+
+let button = document.querySelector("button")
+button.addEventListener("click",(e)=>{
+    e.preventDefault()
+    window.open("https://epicode.com/it/corso-web-developer/")
+})
