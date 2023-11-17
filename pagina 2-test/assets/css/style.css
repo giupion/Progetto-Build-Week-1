@@ -13,13 +13,16 @@ body {
 
 header {
     width: 100%;
-    height: 15rem;
+    min-height: 20rem;
+    max-height: 40rem;
     text-align: justify;
+    box-sizing: border-box;
 }
 
 #logo {
-    height: 18%;
+    height: auto;
     width: auto;
+    max-width: 8rem;
     display: inline-block;
     top: 0;
     left: 0;
@@ -38,15 +41,19 @@ header {
     position: absolute;
     height: 20%;
     width: 20%;
+    min-height: 15rem;
+    min-width: 15rem;
+    max-width: 15rem;
+    max-height: 15rem;
     display: inline-block;
-    top: 3rem;
-    right: 3rem;
+    top: 5%;
+    right: 5%;
     box-sizing: border-box;
 }
 
 .base-timer {
-    width: 15rem;
-    height: 15rem;
+    width: 100%;
+    height: 100%;
     box-sizing:border-box;
   }
 
@@ -63,13 +70,13 @@ header {
 
   .base-timer__label {
     position: absolute;
-    width: 15rem;
-    height: 15rem;
+    width: 100%;
+    height: 100%;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6rem;
+    font-size: 95px;
     font-family: 'Outfit', sans-serif;
     color: white;
     box-sizing: border-box;
@@ -82,11 +89,11 @@ header {
   }
 
   .timer_text1 {
-    top: 4rem;
+    top: 25%;
   }
 
   .timer_text2 {
-    bottom: 4rem;
+    bottom: 25%;
   }
 
   .base-timer__path-remaining {
@@ -96,7 +103,6 @@ header {
   transform-origin: center;
   transition: 1s linear all;
   stroke: currentColor;
-  box-sizing: border-box;
 }
 
 
@@ -118,27 +124,28 @@ header {
 main {
     text-align: center;
     width: auto;
-    box-sizing: border-box;
-    height: 100%;
+    box-sizing: content-box;
 }
 
 main > p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: white;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 0;
     height: 3rem;
+    display: inline-block;
+    margin-top: 2rem;
 }
 
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
-    font-size: 50px;
-    max-width: 80rem;
-    height: 150px;
-    margin: 7rem auto 3rem auto;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    width: 90%;
+    height: 10rem;
+    margin: auto;
+    display: inline-block;
     box-sizing: content-box;
 }
 
@@ -148,14 +155,17 @@ main h2 span {
 }
 
 .test {
+    margin: auto;
     max-width: 60rem;
-    height: 10rem;
+    min-height: 10rem;
+    max-height: 20rem;
     margin: auto;
     text-align: center;
     font-family: 'Inter', sans-serif;
     color: white;
     display: block;
     box-sizing: content-box;
+    margin-top: 1rem;
 }
 
 /*.test label {
@@ -307,6 +317,7 @@ footer {
     letter-spacing: 0.2rem;
     font-weight: 600;
     height: auto;
+    margin-bottom: 4rem;
 }
 
 footer p span {
