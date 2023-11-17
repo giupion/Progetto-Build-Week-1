@@ -32,7 +32,7 @@ function PercentualeSbagliate(){
 
 console.log(PercentualeSbagliate())
 
-//ci dice quante sono le domande corrette e scrivendo in notazione 4/6 corrette integrare con querySelector ed innerText ogni volta che riceve input  cambia numero e testo
+//ci dice quante sono le domande corrette e scrivendo in notazione 4/6 corrette
 
 
 function quanteCorrette(){
@@ -43,7 +43,7 @@ function quanteCorrette(){
 console.log(quanteCorrette())
 
 
-//integrare con querySelector ed innerText ogni volta che riceve input  cambia numero e testo
+//integrare con querySelector ed innerText  
 function quanteSbagliate(){
 
   let messaggioSbagliate=numeroSbagliate+" / " +numeroTotale+" questions";
@@ -52,22 +52,16 @@ function quanteSbagliate(){
 console.log(quanteSbagliate())
 
 
-//
 function Congratulation(){
  
   if(percentualegiusto>60){
-  let congratulazioni=querySelectorAll( "#congratulazioni") 
-  forEach(ele=>ele.innerText ="Congratulations!"+
-  "You passed the exam."
-+"Well send you the certificate  in few minutes."+
-"check your email including promotions/spam folder")
-  
+  let congratulazioni=querySelectorAll( "relative")
   
   }
   
   }
 
-  console.log( Congratulation())
+
 
 
 var effectColors = {
