@@ -17,7 +17,7 @@ header {
 }
 
 #logo {
-    height: 2.5rem;
+    height: 5%;
     width: auto;
     display: inline-block;
     top: 0;
@@ -27,7 +27,7 @@ header {
 }
 
 .spacer {
-    width: 100%;
+    width: 80%;
     display: inline-block;
 }
 
@@ -36,7 +36,7 @@ header {
 #app {
     position: absolute;
     height: 100%;
-    width: auto;
+    width: 20%;
     display: inline-block;
     top: 0;
     right: 0;
@@ -115,22 +115,28 @@ header {
 main {
     text-align: center;
     width: auto;
+    margin-bottom: 7rem;
+    box-sizing: border-box;
 }
 
 main > p {
     margin-top: 3rem;
     font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
+    margin-bottom: 0;
+    height: 3rem;
 }
 
 main h2 {
     font-family: 'Outfit', sans-serif;
     color: white;
     font-size: 50px;
-    max-width: 50rem;
+    max-width: 80rem;
+    height: 150px;
     margin: 7rem auto 3rem auto;
+    margin-bottom: 1rem;
 }
 
 main h2 span {
@@ -140,7 +146,7 @@ main h2 span {
 
 .test {
     max-width: 60rem;
-    height: auto;
+    height: 8rem;
     margin: auto;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -182,6 +188,7 @@ main h2 span {
     border-radius: 2rem;
     text-align: center;
     margin-top: 0;
+    font-size: 16px;
 }
 
 .test label:hover {
@@ -289,13 +296,12 @@ button:active {
 /*footer*/
 
 footer {
-    margin-top: 7rem;
     text-align: center;
     color: white;
     font-family: 'outfit', sans-serif;
     letter-spacing: 0.2rem;
     font-weight: 600;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 footer p span {

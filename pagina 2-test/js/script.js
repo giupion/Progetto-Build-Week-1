@@ -15,7 +15,7 @@ const COLOR_CODES = {
         threshold: ALERT_THRESHOLD
     }
 };
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -124,6 +124,7 @@ const questions = [
 let punteggioUtente = 0;
 let questionNumber = 0;
 let h2 = document.querySelector("h2");
+let pFeedback = document.querySelector("p");
 let form = document.querySelector("form");
 h2.innerText = "Seleziona il numero di domande:";
 let input = `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
@@ -179,7 +180,6 @@ function mostraDomanda() {
                               <label for="risposta ${i + 1}"><p>${risposte[i]}</p></label>`;
         }
         console.log(`domanda ${questionNumber + 1}`);
-        form.innerHTML = `<button type="button" id="conferma">Conferma</button>` + form.innerHTML;
         document.querySelectorAll("input").forEach(ele => {
             ele.addEventListener("click", () => {
                 valutaRisposta();
@@ -230,22 +230,21 @@ function valutaRisposta() {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteCorretta";
             console.log("risposta esatta")
             punteggioUtente++;
-            main.innerHTML += `
-            <p> Risposta esatta!</p>`;
+            pFeedback.innerText += `Risposta esatta!`;
         } else {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteSbagliata";
-            console.log("Risposta sbagliata");
-            main.innerHTML += `<p> Risposta sbagliata</p>`;
+            console.log("Risposta sbagliata.");
+            pFeedback.innerText += `Risposta sbagliata.`;
         }
     } catch (error) {
-        console.log("Non hai risposto diocane")
-        main.innerHTML += `<p> Non hai risposto diocane</p>`
+        console.log("Non hai risposto!")
+        pFeedback.innerText += `Non hai risposto!`
     }
 
     questionNumber++;
     setTimeout(function () {
         mostraDomanda();
-        main.removeChild(document.querySelector("main>p"))
+        pFeedback.innerText = ``;
     }, 2000);
 
 }
