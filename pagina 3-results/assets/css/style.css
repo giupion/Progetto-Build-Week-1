@@ -110,4 +110,9 @@ font-weight: 100;}
 #numeroSbagliate{text-align: center;}
 
 #numeroCorrette{text-align: center;}
-.result p{font-size: 23px;}
+.result p{font-size: 23px;
+text-align: center;
+font-weight: 300;}
+
+
+

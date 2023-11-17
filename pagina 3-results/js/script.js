@@ -1,50 +1,70 @@
 
 
-let percentualeCorrette;
 
-let percentualeSbagliate;
 
-let numeroCorrette;
+let numeroCorrette=8;
 
-let numeroSbagliate;
+let numeroSbagliate=25;
 
-let numeroTotale;
+let numeroTotale=30;
+let percentualegiusto;
+
+
 
 //accoglie il numero di risposte corrette e ne fa avere la percentuale
-function PercentualeCorrette(){
-
-  let percentualegiusto=numeroCorrette*100/numeroTotale
+let percentualeGiuste=function(){
+ 
+  
+ percentualegiusto=(numeroCorrette*100/numeroTotale).toFixed(1);
 
   return percentualegiusto
 }
 
+let selezionePercentualeCorrette=document.querySelector("#numeroCorrette")
+selezionePercentualeCorrette.innerText=percentualeGiuste()+"%"
 
-console.log(PercentualeCorrette())
+//codice per selezionare nodo p e inserirgli testo dinamico CORRETTEPERCENTUALE
+
+
+
+console.log(percentualeGiuste())
 
 //percentuale sbagliate
-function PercentualeSbagliate(){
+let percentualeSbagliate=function (){
 
-  let percentualesbagliato=(numeroCorrette*100 /numeroTotale)-100
+
+  let percentualesbagliato=(numeroSbagliate*100 /numeroTotale).toFixed(1)
+
 
   return percentualesbagliato
 }
 
+let selezionePercentualeSbagliate=document.querySelector("#numeroSbagliate")
+selezionePercentualeSbagliate.innerText=percentualeSbagliate()+"%"
+console.log(percentualeSbagliate())
 
-console.log(PercentualeSbagliate())
+
+//codice per selezionare nodo p e inserirgli testo dinamico SBAGLIATE PERCENTUALE
+
+// fin qui tutto bene
+
 
 //ci dice quante sono le domande corrette e scrivendo in notazione 4/6 corrette
 
 
-function quanteCorrette(){
+let quanteCorrette=function (){
 
-  let messaggioCorrette=numeroCorrette+" / " +numeroTotale+"questions";
+  let messaggioCorrette=numeroCorrette+" / " +numeroTotale+" questions";
   return messaggioCorrette
 }
 console.log(quanteCorrette())
 
+let selezioneTestoCorretto=document.querySelector("#testoCorrette")
+selezioneTestoCorretto.innerText=quanteCorrette()
+//codice per scirvere testo in notazione giuste /totali
 
-//integrare con querySelector ed innerText  
-function quanteSbagliate(){
+
+let quanteSbagliate=function (){
 
   let messaggioSbagliate=numeroSbagliate+" / " +numeroTotale+" questions";
   return messaggioSbagliate
@@ -52,15 +72,44 @@ function quanteSbagliate(){
 console.log(quanteSbagliate())
 
 
-function Congratulation(){
+
+let selezioneTestoSbagliate=document.querySelector("#testoSbagliate")
+selezioneTestoSbagliate.innerText=quanteSbagliate()
+//codice per scirvere testo in notazione sbagliate/totali
+
+
+let cong=document.querySelector( "#Congra");
+    
+    
+let  passed=document.querySelector("#youPassed");
+let certifi=document.querySelector( "#certificate");
+
+
+const Congratulation=function (){
  
-  if(percentualegiusto>60){
-  let congratulazioni=querySelectorAll( "relative")
+  if(percentualeGiuste()>=60){
   
-  }
+    
+
+
+cong.innerText="Congratulations!"
+  
+  passed.innerText="You passed the exam."
+
+  certifi.innerText="We'll send you the certificate in few minutes.Check your email (including promotions/spam folder)"
+
   
   }
 
+  else{cong.innerText="Sorry!"
+  
+  passed.innerText="Unfurtunately you  didn't passed the exam."
+  certifi.innerText="Try again! not blame yourself and keep pushing!"
+ }
+ 
+  
+  }
+  Congratulation()
 
 
 
@@ -87,7 +136,7 @@ var effectColors = {
         
       ],
       datasets: [{
-        data: [33.3,66.7], 
+        data: [percentualeSbagliate(),percentualeGiuste()], 
         backgroundColor: ["#C1138C","#03FFFF" ],
         shadowOffsetX: 3,
 			shadowOffsetY: 3,
