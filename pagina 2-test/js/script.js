@@ -15,7 +15,7 @@ const COLOR_CODES = {
         threshold: ALERT_THRESHOLD
     }
 };
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -179,7 +179,6 @@ function mostraDomanda() {
                               <label for="risposta ${i + 1}"><p>${risposte[i]}</p></label>`;
         }
         console.log(`domanda ${questionNumber + 1}`);
-        form.innerHTML = `<button type="button" id="conferma">Conferma</button>` + form.innerHTML;
         document.querySelectorAll("input").forEach(ele => {
             ele.addEventListener("click", () => {
                 valutaRisposta();
@@ -234,12 +233,12 @@ function valutaRisposta() {
             <p> Risposta esatta!</p>`;
         } else {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteSbagliata";
-            console.log("Risposta sbagliata");
-            main.innerHTML += `<p> Risposta sbagliata</p>`;
+            console.log("Risposta sbagliata.");
+            main.innerHTML += `<p> Risposta sbagliata.</p>`;
         }
     } catch (error) {
-        console.log("Non hai risposto diocane")
-        main.innerHTML += `<p> Non hai risposto diocane</p>`
+        console.log("Non hai risposto!")
+        main.innerHTML += `<p> Non hai risposto!</p>`
     }
 
     questionNumber++;
