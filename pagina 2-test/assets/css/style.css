@@ -307,3 +307,116 @@ footer {
 footer p span {
     color: #D20094;
 }
+
+#title{
+  color: white;
+  text-align: center;
+}
+h1{
+  padding-top:40px;
+font-family: 'Outfit', sans-serif; 
+font-weight: bold;
+font-size:50px;
+}
+.pagina3 p {
+padding-top: 10px;
+font-family: 'Outfit', sans-serif; 
+font-size: 25px;  
+color:white;  
+}
+
+.container{ 
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 40px;
+
+color: white;
+}
+
+#allinearesults{margin-left:15px;}
+.result{
+ 
+ font-size: 50px;
+font-family: 'Outfit', sans-serif;
+}
+
+#wrongQuest{
+  color: #E1D6E4;
+}
+.footerPagina3 footer{
+  padding: 60px;
+  text-align: center;
+}
+.pagina3 button{
+font-family: 'Outfit', sans-serif;   
+text-transform: uppercase;
+font-weight: 600;
+font-size:20px;
+padding: 15px 60px;
+margin-left:15px;
+
+border-color:white ;
+color: white;
+background-color: transparent;
+}
+
+
+
+
+
+
+.relative {
+  position: relative;
+}
+
+.absolute-center {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.absolute-center h2{
+  font-size:24px;
+  color:white;
+  margin-bottom:5px;
+  font-family: 'Outfit', sans-serif;
+  }
+
+.absolute-center h3{
+  font-family: 'Outfit', sans-serif;
+  font-size:22px;
+  color:#03FFFF;
+  }
+
+.absolute-center p{
+  font-family: 'Outfit', sans-serif;
+  margin-top:10px;
+  line-height:1.5em;
+  font-size:16px;
+font-weight: 100;}
+
+#rightQuestPercento{text-align: center;}
+
+#wrongQuestPercento{text-align: center;}
+
+
+#numeroSbagliate{text-align: center;}
+
+#numeroCorrette{text-align: center;}
+.result p{font-size: 23px;
+text-align: center;
+font-weight: 300;}
+
+a{color:white;
+  text-decoration: none;
+
+  
+}
+

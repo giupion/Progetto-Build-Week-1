@@ -1,20 +1,9 @@
-
-
-
-
 let numeroCorrette=8;
-
 let numeroSbagliate=25;
-
 let numeroTotale=30;
 let percentualegiusto;
-
-
-
 //accoglie il numero di risposte corrette e ne fa avere la percentuale
 let percentualeGiuste=function(){
- 
-  
  percentualegiusto=(numeroCorrette*100/numeroTotale).toFixed(1);
 
   return percentualegiusto

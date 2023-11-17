@@ -142,7 +142,7 @@ function iniziaTest() {
 }
 
 function mostraDomanda() {
-    console.log("sono in mostra domanda");    
+    console.log("sono in mostra domanda");
     let risposte = [];
     if (questionNumber < numDomande) {
         console.log("Sono nell'if");
@@ -165,10 +165,10 @@ function mostraDomanda() {
                                             </g>
                                         </svg>
                                         <span id="base-timer-label" class="base-timer__label">${formatTime(
-                                                timeLeft
-                                            )}</span>
+            timeLeft
+        )}</span>
                                         </div>
-                                        `;  
+                                        `;
         let form = document.querySelector("form");
         form.innerHTML = ``;
         let h2 = document.querySelector("h2");
@@ -185,10 +185,140 @@ function mostraDomanda() {
                 valutaRisposta();
             })
         });
-        document.querySelector("footer").innerHTML = `<p>Question <span>${questionNumber + 1}/${numDomande}</span></p>`;
+        document.querySelector("footer").innerHTML = `<p>QUESTION <span>${questionNumber + 1}/${numDomande}</span></p>`;
         startTimer();
-    } else {
-
+    } else {        
+        main.innerHTML = `
+                                <div class="container">
+                        <div id="title">
+                            <h1 id="allinearesults">Results</h1>
+                            <p class="pagina3">The summary of your answers:</p>
+                            </div> 
+                        <div class="result">
+                            <h2 id="rightQuestPercento">Correct</h2>
+                        <h3 id="numeroCorrette"></h3>
+                        <p class="pagina3" id="testoCorrette"></p>
+                        
+                            
+                        </div>
+                        <div class="relative"><canvas id="risultati" width="400" height="400"></canvas>
+                        <div class="absolute-center text-center">
+                            
+                            <div id="congratulazioni">
+                                <h2 id="Congra"></h2>
+                                <h3 id="youPassed"></h2>
+                        <p class="pagina3" id="certificate"></p>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="result">
+                            <h2 >Wrong <h2 id="wrongQuestPercento"></h2></h2>
+                            <h3 id="numeroSbagliate"></h3>
+                            <p class="pagina3" id="testoSbagliate"></p>
+                        </div>
+                        </div>
+                                `
+        document.querySelector("footer").innerHTML=`
+        <button type="button" class="pagina3"><a href="../pagina 4-review/index.html" >rate us</a></button>
+        `
+        document.querySelector("footer").classList.add="footerPagina3";
+        document.querySelector("#numeroCorrette").innerText=String((punteggioUtente*100/numDomande).toFixed(1))+"%";
+        document.querySelector("#numeroSbagliate").innerText=String(((numDomande-punteggioUtente)*100/numDomande).toFixed(1))+"%";
+        document.querySelector("#testoCorrette").innerText=`${punteggioUtente}/${numDomande} questions`;
+        document.querySelector("#testoSbagliate").innerText=`${numDomande-punteggioUtente}/${numDomande} questions`;
+        if(punteggioUtente/numDomande>=0.6){
+            document.querySelector( "#Congra").innerText="Congratulations!";
+            document.querySelector("#youPassed").innerText="You passed the test!"
+            document.querySelector( "#certificate").innerText="We send you the certificate in few minute";
+        }else{
+            document.querySelector( "#Congra").innerText="Sorry!";
+            document.querySelector("#youPassed").innerText="Unfurtunately you didn't passed the test.";
+            document.querySelector( "#certificate").innerText="Try again! not blame yourself and keep pushing!";
+        }
+        let nodo = document.querySelector('#risultati').getContext('2d');
+        var effectColors = {
+            highlight: 'rgba(0, 0, 0, 0.75)',
+            shadow: 'rgba(0, 255, 255, 0.5)',
+            glow: 'rgb(255, 255, 0)'	
+        };
+        let graficoCiambella = new Chart(nodo, {
+            type: 'doughnut',
+           
+            data : {
+              labels: [
+                'Wrong',
+                'Correct',
+                
+              ],
+              datasets: [{
+                data: [((numDomande-punteggioUtente)*100/numDomande).toFixed(1),(punteggioUtente*100/numDomande).toFixed(1)], 
+                backgroundColor: ["#C1138C","#03FFFF" ],
+                
+                
+                
+              }],
+              
+              
+            },
+           
+            options:{
+        
+              
+              cutoutPercentage: 50, 
+              responsive: true, 
+              cutout: 140,
+        
+              elements: {
+        
+                
+                arc: {
+                  borderWidth: 1, 
+                  borderColor:'#333',
+        
+                  prototype:{draw:{shadowOffsetX: 3,
+                    shadowOffsetY: 3,
+                    shadowBlur: 10,
+                    shadowColor: effectColors.shadow,
+                    bevelWidth: 2,
+                    bevelHighlightColor: effectColors.highlight,
+                    bevelShadowColor: effectColors.shadow}}
+                  
+                }
+              },
+            
+              plugins: {
+                legend: false,
+            }
+            
+            },
+        
+            tooltips: {
+                    shadowOffsetX: 3,
+                    shadowOffsetY: 3,
+                    shadowBlur: 10,
+                    shadowColor: effectColors.shadow,
+                    bevelWidth: 2,
+                    bevelHighlightColor: effectColors.highlight,
+                    bevelShadowColor: effectColors.shadow
+                },
+        
+            
+          }        
+          );
+           
+        
+          const ShadowPlugin = {
+            beforeDraw: (chart, args, options) => {
+              const { ctx } = chart;
+              ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+              ctx.shadowBlur = 10;
+              ctx.shadowOffsetX = 5;
+              ctx.shadowOffsetY = 5;
+            },
+          };
+        
+          graficoCiambella;
+        
 
 
     }
@@ -212,7 +342,7 @@ function shuffleRisposte(domanda) {
 
 function valutaRisposta() {
     console.log("sono in valutaRisposta()");
-    document.getElementById("app").innerHTML="";
+    document.getElementById("app").innerHTML = "";
     clearInterval(timerInterval);
     timeLeft = TIME_LIMIT;
     timePassed = 0;
@@ -240,13 +370,11 @@ function valutaRisposta() {
         console.log("Non hai risposto!")
         pFeedback.innerText += `Non hai risposto!`
     }
-
     questionNumber++;
     setTimeout(function () {
         mostraDomanda();
         pFeedback.innerText = ``;
     }, 2000);
-
 }
 
 function startTimer() {
@@ -272,11 +400,9 @@ function onTimesUp() {
 
 function formatTime(time) {
     let seconds = time % 60;
-
     if (seconds < 10) {
         seconds = `0${seconds}`;
     }
-
     return `<p class="timer_text1">SECONDS</p>${seconds}<p class="timer_text2">REMAINING</p>`;
 }
 
