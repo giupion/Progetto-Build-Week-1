@@ -20,14 +20,12 @@ header {
 }
 
 #logo {
-  height: auto;
-  width: auto;
-  max-width: 8rem;
+  height: 40px;
   display: inline-block;
   top: 0;
   left: 0;
-  margin-left: 4%;
-  margin-top: 4%;
+  margin-left: 130px;
+  margin-top: 40px;
 }
 
 /*.spacer {
