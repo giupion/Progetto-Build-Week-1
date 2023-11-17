@@ -138,24 +138,11 @@ var effectColors = {
       datasets: [{
         data: [percentualeSbagliate(),percentualeGiuste()], 
         backgroundColor: ["#C1138C","#03FFFF" ],
-        shadowOffsetX: 3,
-			shadowOffsetY: 3,
-			shadowBlur: 10,
+        
 		
         
       }],
-      shadowOffsetX: 3,
-			shadowOffsetY: 3,
-			shadowBlur: 20,
-			shadowColor: effectColors.shadow,
-			bevelWidth: 2,
-			bevelHighlightColor: effectColors.highlight,
-			bevelShadowColor: effectColors.shadow,
-			hoverInnerGlowWidth: 20,
-			hoverInnerGlowColor: effectColors.glow,
-			hoverOuterGlowWidth: 20,
-			hoverOuterGlowColor: effectColors.glow
-
+      
       
     },
    
@@ -206,8 +193,20 @@ var effectColors = {
   );
    
 
+  const ShadowPlugin = {
+    beforeDraw: (chart, args, options) => {
+      const { ctx } = chart;
+      ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 5;
+      ctx.shadowOffsetY = 5;
+    },
+  };
+
  
    console.log(Chart)
+
+
 
 
   
