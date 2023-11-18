@@ -15,6 +15,7 @@ const COLOR_CODES = {
         threshold: ALERT_THRESHOLD
     }
 };
+
 const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
@@ -181,9 +182,7 @@ function mostraDomanda() {
         }
         console.log(`domanda ${questionNumber + 1}`);
         document.querySelectorAll("input").forEach(ele => {
-            ele.addEventListener("click", () => {
-                valutaRisposta();
-            })
+            ele.addEventListener("click", onTimesUp);
         });
         document.querySelector("footer").innerHTML = `<p>QUESTION <span>${questionNumber + 1}/${numDomande}</span></p>`;
         startTimer();
@@ -343,6 +342,9 @@ function shuffleRisposte(domanda) {
 
 function valutaRisposta() {
     console.log("sono in valutaRisposta()");
+    document.querySelectorAll("input").forEach(ele => {
+        ele.removeEventListener("click", onTimesUp);
+    });
     document.getElementById("app").innerHTML = "";
     clearInterval(timerInterval);
     timeLeft = TIME_LIMIT;
