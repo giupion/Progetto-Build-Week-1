@@ -136,6 +136,7 @@ function sottoArray(arr,n){
     let arrClone = [...arr];
     for(let i=0; i<n;i++){
         sottoArray.push(arrClone.splice(Math.floor(Math.random()*arrClone.length),1)[0])
+        console.log(sottoArray)
     }
     return sottoArray;
 }

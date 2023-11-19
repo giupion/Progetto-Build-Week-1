@@ -235,7 +235,7 @@ function mostraDomanda() {
             document.querySelector("#certificate").innerText = "We send you the certificate in few minute";
         } else {
             document.querySelector("#Congra").innerText = "Sorry!";
-            document.querySelector("#youPassed").innerText = "Unfurtunately you didn't passed the test.";
+            document.querySelector("#youPassed").innerText = "Unfortunately you didn't passed the test.";
             document.querySelector("#certificate").innerText = "Try again! not blame yourself and keep pushing!";
         }
         let nodo = document.querySelector('#risultati').getContext('2d');
