@@ -211,7 +211,7 @@ function mostraDomanda() {
                         </div>
                         </div>
                         <div class="result">
-                            <h2 >Wrong <h2 id="wrongQuestPercento"></h2></h2>
+                           <h2 id="wrongQuestPercento">Wrong</h2>
                             <h3 id="numeroSbagliate"></h3>
                             <p class="pagina3" id="testoSbagliate"></p>
                         </div>
@@ -263,7 +263,7 @@ function mostraDomanda() {
 
                 cutoutPercentage: 50,
                 responsive: true,
-                cutout: 140,
+                cutout: 130,
 
                 elements: {
 
