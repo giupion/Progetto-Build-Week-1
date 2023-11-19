@@ -188,11 +188,15 @@ function mostraDomanda() {
         startTimer();
     } else {
         main.innerHTML = `
-                                <div class="container">
+
+                                
                         <div id="title">
+                       
                             <h1 id="allinearesults">Results</h1>
                             <p class="pagina3">The summary of your answers:</p>
                             </div> 
+                            <div class="container">
+                           
                         <div class="result">
                             <h2 id="rightQuestPercento">Correct</h2>
                         <h3 id="numeroCorrette"></h3>

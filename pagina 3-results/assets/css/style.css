@@ -65,6 +65,7 @@ p{color:white;}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  
   }
   
   .text-center{
@@ -100,6 +101,7 @@ font-weight: 100;}
 #numeroSbagliate{text-align: center;}
 
 #numeroCorrette{text-align: center;}
+
 .result p{font-size: 23px;
 text-align: center;
 font-weight: 300;}
