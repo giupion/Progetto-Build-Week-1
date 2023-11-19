@@ -344,15 +344,16 @@ color:white;
 }
 
 .container{ 
-display: flex;
+  display: flex;
+  text-align: center;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 40px;
-
+width:100%;
 color: white;
 }
 
-#allinearesults{margin-left:15px;}
+
 
 .result{
  
@@ -379,8 +380,6 @@ border-color:white ;
 color: white;
 background-color: transparent;
 }
-
-
 
 
 
@@ -445,7 +444,7 @@ button{
   font-weight: 600;
   font-size:20px;
   padding: 15px 60px;
-  margin-left:430px;
+  margin-left:550px;
   margin-top: 100px;
   border-color:white ;
   color: white;
@@ -467,10 +466,11 @@ font-weight: 100;}
   margin-top:-100px;}
 
 
-  #allinearesults{margin-top: -600px;
- 
+  #allinearesults{margin-top: -500px;
 
 }
+
+
 
 
 
