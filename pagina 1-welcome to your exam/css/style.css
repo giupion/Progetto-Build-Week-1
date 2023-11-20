@@ -3,9 +3,7 @@
  color: #E7E7EC;
  text-decoration: none;
  font-family: 'Inter', sans-serif;
- 
 }
-
 
 body{
 background-image: url("../assets-immagini/bg.jpg") ;
@@ -13,26 +11,17 @@ background-size:cover;
 margin-left: 130px; 
 }
 
-
-.container{
-  
+.container{ 
 text-align: left;
 margin:0 auto;
 width:100%
-
 }
-
-
-
 
 .EpicodeLogo{
   height: 40px;
   
 margin-top: 40px;
 }
-
-
-
 
  h1{font-size: 60px;
  font-weight: bolder;
@@ -41,37 +30,24 @@ margin-top: 40px;
  margin-top: -15px;
 }
 
-
 h3{
   margin-top: 80px;
   font-size: 60px;
  font-family: 'Outfit', sans-serif;
-
-
 }
-
 
 h2{font-size: 25px;
  margin-bottom: 10px;
 font-weight: bold;
 font-family: 'Outfit', sans-serif;
 
-
 }
-
-
-
 
  p{margin-bottom:45px;
  font-size:16px;
  line-height: 1.5em;
 color: #CACBD2;
 }
-
-
-
-
-
 
  ul{padding-inline-start:25px;
      margin-bottom:50px;
@@ -82,38 +58,15 @@ color: #CACBD2;
          line-height: 1.5em;
          font-size:16px;}
 
-
-   
-a{color:#0b113b;}
-
-
  h2{color:#C2138E;}
 
 
  span{font-weight: bold;}
 
-
-
-
- .glow-button:hover {
-     color: rgba(255, 255, 255, 1);
-     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-   }
- 
-
-
- 
-
-
-
-
    form {
      margin: 1rem auto;
      max-width: 750px;
  }
-
-
-
 
  .wrapper {
    position: relative;
@@ -121,13 +74,6 @@ a{color:#0b113b;}
    margin-top: 1rem;
   
 }
-
-
-
-
-
-
-
 
 .wrapper input {
 
@@ -179,9 +125,16 @@ padding-left: 40px;
 top:50px;
 }
 
+button:active {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0px 15px #00FFFF;
+}
+
+button:hover {
+  box-shadow: 0 0px 15px #00FFFF;
+}
 
 button{
-
 color:#0b113b;
 background-color: #00FFFF;
 border: none;
@@ -196,15 +149,7 @@ padding-top:15px;
 padding-left:50px;
 padding-right:50px;
 font-size:20px;
-
-}
-
-
-
-
-.glow-button:hover {
- color: rgba(255, 255, 255, 1);
- box-shadow:0px 0px 8px 2px rgba(145, 92, 182, .4);
+cursor: pointer;
 }
 
 
@@ -215,7 +160,3 @@ font-size:20px;
 
 
 
-/*button:active {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 0px 15px #00FFFF;
-}/*
