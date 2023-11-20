@@ -199,11 +199,7 @@ let nodo = document.querySelector('#risultati').getContext('2d');
   
 
  
-<<<<<<< HEAD
-   console.dir(graficoCiambella)
-=======
    
->>>>>>> e2c8b191546a124b662d63a66540e601eae6cf94
 
 
 
