@@ -26,5 +26,3 @@ button.addEventListener("click",(e)=>{
     e.preventDefault()
     window.open("https://epicode.com/it/corso-web-developer/")
 })
-
-//dhfjshfjshfds
