@@ -17,6 +17,7 @@ header {
   max-height: 20rem;
   text-align: justify;
   box-sizing: border-box;
+  
 }
 
 #logo {
@@ -330,6 +331,7 @@ footer p span {
 #title{
   color: white;
   text-align: center;
+
 }
 h1{
   padding-top:40px;
@@ -345,15 +347,17 @@ color:white;
 }
 
 .container{ 
-display: flex;
+  display: flex;
+  text-align: center;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 40px;
-
+width:100%;
 color: white;
 }
 
-#allinearesults{margin-left:15px;}
+
+
 .result{
  
  font-size: 50px;
@@ -373,14 +377,12 @@ text-transform: uppercase;
 font-weight: 600;
 font-size:20px;
 padding: 15px 60px;
-margin-left:15px;
 
+margin-top: 110px;
 border-color:white ;
 color: white;
 background-color: transparent;
 }
-
-
 
 
 
@@ -438,4 +440,46 @@ a{color:white;
 
   
 }
+
+button{
+  font-family: 'Outfit', sans-serif;   
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size:20px;
+  padding: 15px 60px;
+  margin-left:50px;
+  margin-top: 100px;
+  border-color:white ;
+  color: white;
+  background-color: transparent;
+  }
+
+
+  #congra{margin-top: 15px;}
+
+ #youPassed{margin-top: -120px;
+font-weight: 100;}
+
+#certificate{font-weight: 100 important!;}
+
+#numeroCorrette{text-align: center;
+  margin-top:-100px;}
+
+#numeroSbagliate{text-align: center;
+  margin-top:-100px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 

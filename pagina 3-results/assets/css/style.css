@@ -35,8 +35,9 @@ color: white;
 }
 
 #allinearesults{margin-left:15px;}
+
 .result{
-   
+   margin-left:15px;
    font-size: 50px;
 font-family: 'Outfit', sans-serif;
 }
@@ -48,18 +49,7 @@ footer{
     padding: 60px;
     text-align: center;
 }
-button{
-font-family: 'Outfit', sans-serif;   
-text-transform: uppercase;
-font-weight: 600;
-font-size:20px;
-padding: 15px 60px;
-margin-left:15px;
 
-border-color:white ;
-color: white;
-background-color: transparent;
-}
 
 p{color:white;}
 
@@ -75,6 +65,7 @@ p{color:white;}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  
   }
   
   .text-center{
@@ -110,6 +101,7 @@ font-weight: 100;}
 #numeroSbagliate{text-align: center;}
 
 #numeroCorrette{text-align: center;}
+
 .result p{font-size: 23px;
 text-align: center;
 font-weight: 300;}
@@ -117,8 +109,21 @@ font-weight: 300;}
 a{color:white;
     text-decoration: none;
 
-    
 }
+
+button{
+  font-family: 'Outfit', sans-serif;   
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size:20px;
+  padding: 15px 60px;
+  margin-left:-50px;
+  margin-top: 100px;
+  border-color:white ;
+  color: white;
+  background-color: transparent;
+  }
+
 
 
 
