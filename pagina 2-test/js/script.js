@@ -712,8 +712,8 @@ function valutaRisposta() {
             }
             contatore++;
             if (contatore==indice1*5 ){
-                indice1++;
                 pFeedback.innerText += fraseMemePositiva[indice1-1];
+                indice1++;
             }else{
                 pFeedback.innerText += feedbackPositivo[Math.floor(Math.random()*feedbackPositivo.length)];
             }
@@ -728,8 +728,8 @@ function valutaRisposta() {
             }
             contatore--;
             if (contatore==(-1)*indice2*5 ){
-                indice2++;
                 pFeedback.innerText += fraseMemeNegativa[indice2-1];
+                indice2++;
             }else{
                 pFeedback.innerText +=  feedbackNegativo[Math.floor(Math.random()*feedbackNegativo.length)]
             }
