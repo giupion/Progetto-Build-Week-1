@@ -102,12 +102,6 @@ cong.innerText="Congratulations!"
 
 
 
-var effectColors = {
-	highlight: 'rgba(0, 0, 0, 0.75)',
-	shadow: 'rgba(0, 255, 255, 0.5)',
-	glow: 'rgb(255, 255, 0)'	
-};
-  
 
 
 
@@ -127,7 +121,21 @@ var effectColors = {
       datasets: [{
         data: [percentualeSbagliate(),percentualeGiuste()], 
         backgroundColor: ["#C1138C","#03FFFF" ],
-        
+        bevelWidth: 3,
+
+      bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+
+      bevelShadowColor: 'rgba(0, 0, 0, 1)',
+
+      shadowOffsetX: 3,
+
+      shadowOffsetY: 3,
+
+      shadowBlur: 10,
+
+      shadowColor: 'rgba(0, 0, 0, 1)',
+
+    
 		
         
       }],
@@ -149,13 +157,7 @@ var effectColors = {
           borderWidth: 1, 
           borderColor:'#333',
 
-          prototype:{draw:{shadowOffsetX: 3,
-            shadowOffsetY: 3,
-            shadowBlur: 10,
-            shadowColor: effectColors.shadow,
-            bevelWidth: 2,
-            bevelHighlightColor: effectColors.highlight,
-            bevelShadowColor: effectColors.shadow}}
+         
           
         }
       },
@@ -165,36 +167,39 @@ var effectColors = {
 
     }
     
+    
     },
 
-    tooltips: {
-			shadowOffsetX: 3,
-			shadowOffsetY: 3,
-			shadowBlur: 10,
-			shadowColor: effectColors.shadow,
-			bevelWidth: 2,
-			bevelHighlightColor: effectColors.highlight,
-			bevelShadowColor: effectColors.shadow
-		},
+    tooplips: {
 
+      bevelWidth: 3,
+
+      bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+
+      bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+
+      shadowOffsetX: 3,
+
+      shadowOffsetY: 3,
+
+      shadowBlur: 10,
+
+      shadowColor: 'rgba(0, 0, 0, 0.5)'
+
+
+
+    
+    }
     
   }
  
   );
    
 
-  const ShadowPlugin = {
-    beforeDraw: (chart, args, options) => {
-      const { ctx } = chart;
-      ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
-      ctx.shadowBlur = 10;
-      ctx.shadowOffsetX = 5;
-      ctx.shadowOffsetY = 5;
-    },
-  };
+  
 
  
-   console.log(Chart())
+   console.dir(graficoCiambella)
 
 
 
