@@ -120,25 +120,223 @@ const questions = [
         correct_answer: "Java",
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "What is known as 'the brain' of the Computer?",
+        correct_answer: "Central Processing Unit",
+        incorrect_answers: ["Motherboard", "Graphics Processing Unit", "Keyboard"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "In HTML, which non-standard tag used to be used to make elements scroll across the viewport?",
+        correct_answer: "<marquee></marquee>",
+        incorrect_answers: ["<scroll></scroll>", "<move></move>", "<slide></slide>"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "Which of these programming languages is a low-level language?",
+        correct_answer: "Assembly",
+        incorrect_answers: ["Python", "C#", "Pascal"]
+    },
+    {
+        type: "boolean",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "The open-source program Redis is a relational database server.",
+        correct_answer: "False",
+        incorrect_answers: ["True"]
+    },
+    {
+        type: "boolean",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: '"Windows NT" is a monolithic kernel.',
+        correct_answer: "False",
+        incorrect_answers: ["True"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "Unix Time is defined as the number of seconds that have elapsed since when?",
+        correct_answer: "Midnight, January 1, 1970",
+        incorrect_answers: ["Midnight, July 4, 1976", "Midnight on the creator of Unix's birthday", "Midnight, July 4, 1980"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "In programming, what do you call functions with the same name but different implementations?",
+        correct_answer: "Overloading",
+        incorrect_answers: ["Overriding", "Abstracting", "Inheriting"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "What does the term GPU stand for?",
+        correct_answer: "Graphics Processing Unit",
+        incorrect_answers: ["Gaming Processor Unit", "Graphite Producing Unit", "Graphical Proprietary Unit"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "The computer OEM manufacturer Clevo, known for its Sager notebook line, is based in which country?",
+        correct_answer: "Taiwan",
+        incorrect_answers: ["United States", "Germany", "China (People's Republic of)"]
+    },
+    {
+        type: "multiple",
+        difficulty: "medium",
+        category: "Science: Computers",
+        question: "On which computer hardware device is the BIOS chip located?",
+        correct_answer: "Motherboard",
+        incorrect_answers: ["Hard Disk Drive", "Central Processing Unit", "Graphics Processing Unit"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "Which of the following computer components can be built using only NAND gates?",
+        correct_answer: "ALU",
+        incorrect_answers: ["CPU", "RAM", "Register"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "Which data structure does FILO apply to?",
+        correct_answer: "Stack",
+        incorrect_answers: ["Queue", "Heap", "Tree"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: 'The acronym "RIP" stands for which of these?',
+        correct_answer: "Routing Information Protocol",
+        incorrect_answers: ["Runtime Instance Processes", "Regular Interval Processes", "Routine Inspection Protocol"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+        correct_answer: "A' + B'",
+        incorrect_answers: ["A'B + B'A", "A'B'", "AB' + AB"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "The internet domain .fm is the country-code top-level domain for which Pacific Ocean island nation?",
+        correct_answer: "Micronesia",
+        incorrect_answers: ["Fiji", "Tuvalu", "Marshall Islands"]
+    },
+    {
+        type: "boolean",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "DHCP stands for Dynamic Host Configuration Port.",
+        correct_answer: "False",
+        incorrect_answers: ["True"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "Dutch computer scientist Mark Overmars is known for creating which game development engine?",
+        correct_answer: "Game Maker",
+        incorrect_answers: ["Stencyl", "Construct", "Torque 2D"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "What is the name of the process that sends one qubit of information using two bits of classical information?",
+        correct_answer: "Quantum Teleportation",
+        incorrect_answers: ["Super Dense Coding", "Quantum Entanglement", "Quantum Programming"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "How many Hz does the video standard PAL support?",
+        correct_answer: "50",
+        incorrect_answers: ["59", "60", "25"]
+    },
+    {
+        type: "multiple",
+        difficulty: "hard",
+        category: "Science: Computers",
+        question: "What does the International System of Quantities refer 1024 bytes as?",
+        correct_answer: "Kibibyte",
+        incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"]
+    }
 ];
+
 
 let punteggioUtente = 0;
 let questionNumber = 0;
 let h2 = document.querySelector("h2");
 let pFeedback = document.querySelector("p");
 let form = document.querySelector("form");
-h2.innerText = "Seleziona il numero di domande:";
-let input = `<input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}"></input>`;
-let bottoneNumero = ` <button type="button" onclick="iniziaTest()">Inizia il test!</button>`;
-form.innerHTML = input + bottoneNumero;
 let main = document.querySelector("main");
 let numDomande;
 let domande;
+sceltaDifficoltà();
+
+function sceltaNumero() {
+    let input = `<input type="number" id="numeroDomande" placeholder="1" min="1" max="${questions.length}" value="${questions.length}"></input>`;
+    h2.innerText = "Seleziona il numero di domande:";
+    let bottoneNumero = ` <button type="button" onclick="iniziaTest()">Inizia il test!</button>`;
+    form.innerHTML = input + bottoneNumero;
+    domande = questions;
+}
+function sceltaDifficoltà() {
+    h2.innerText = "Seleziona il livello di difficoltà e il numero delle domande:";
+
+    form.innerHTML = `<select id="selettoreDifficoltà" onchange="mostraNumDomande()" value="qualsiasi">
+                        <option value="qualsiasi">Qualsiasi</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        
+                    </select>
+                    <input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}" ></input>
+                    <button type="button" onclick="iniziaTest()" >Inizia il test!</button>`
+}
+
+
+
+function mostraNumDomande() {
+    let selettoreDifficoltà = document.querySelector("#selettoreDifficoltà");
+    console.log(selettoreDifficoltà.value);
+    let difficoltà = selettoreDifficoltà.value;
+    if (difficoltà != "qualsiasi") {
+        domande = questions.filter(ele => ele.difficulty === difficoltà);
+        console.log(difficoltà);
+    } else {
+        domande = questions;
+    }
+    document.querySelector('#numeroDomande').max = `${domande.length}`;
+    document.querySelector('#numeroDomande').value = `${domande.length}`;
+   document.querySelector('#numeroDomande').disabled = false;
+    document.querySelector("button").disabled = false;
+}
+
 
 function iniziaTest() {
     numDomande = Number(document.getElementById("numeroDomande").value);
     console.log(numDomande);
-    domande = sottoArray(questions, numDomande);
+    domande = sottoArray(domande, numDomande);
     mostraDomanda();
 }
 
@@ -186,7 +384,7 @@ function mostraDomanda() {
         });
         document.querySelector("footer").innerHTML = `<p>QUESTION <span>${questionNumber + 1}/${numDomande}</span></p>`;
         startTimer();
-    } else {
+    } else { /*
         main.innerHTML = `
                                 <div class="container">
                         <div id="title">
@@ -235,89 +433,13 @@ function mostraDomanda() {
             document.querySelector("#certificate").innerText = "Try again! not blame yourself and keep pushing!";
         }
         let nodo = document.querySelector('#risultati').getContext('2d');
-        var effectColors = {
-            highlight: 'rgba(0, 0, 0, 0.75)',
-            shadow: 'rgba(0, 255, 255, 0.5)',
-            glow: 'rgb(255, 255, 0)'
-        };
-        let graficoCiambella = new Chart(nodo, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Wrong',
-                    'Correct',
-                ],
-                datasets: [{
-                    data: [((numDomande - punteggioUtente) * 100 / numDomande).toFixed(1), (punteggioUtente * 100 / numDomande).toFixed(1)],
-                    backgroundColor: ["#C1138C", "#03FFFF"],
+      
+        graficoCiambella; */
 
+        sessionStorage.setItem("punteggioUtente", punteggioUtente);
+        sessionStorage.setItem('numDomande', numDomande);
 
-
-                }],
-
-
-            },
-
-            options: {
-
-
-                cutoutPercentage: 50,
-                responsive: true,
-                cutout: 140,
-
-                elements: {
-
-
-                    arc: {
-                        borderWidth: 1,
-                        borderColor: '#333',
-
-                        prototype: {
-                            draw: {
-                                shadowOffsetX: 3,
-                                shadowOffsetY: 3,
-                                shadowBlur: 10,
-                                shadowColor: effectColors.shadow,
-                                bevelWidth: 2,
-                                bevelHighlightColor: effectColors.highlight,
-                                bevelShadowColor: effectColors.shadow
-                            }
-                        }
-
-                    }
-                },
-
-                plugins: {
-                    legend: false,
-                }
-
-            },
-
-            tooltips: {
-                shadowOffsetX: 3,
-                shadowOffsetY: 3,
-                shadowBlur: 10,
-                shadowColor: effectColors.shadow,
-                bevelWidth: 2,
-                bevelHighlightColor: effectColors.highlight,
-                bevelShadowColor: effectColors.shadow
-            },
-
-
-        });
-
-
-        const ShadowPlugin = {
-            beforeDraw: (chart, args, options) => {
-                const { ctx } = chart;
-                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
-                ctx.shadowBlur = 10;
-                ctx.shadowOffsetX = 5;
-                ctx.shadowOffsetY = 5;
-            },
-        };
-
-        graficoCiambella;
+        window.location.href = "../pagina 3-results/indexProva.html";
 
 
 
@@ -346,9 +468,6 @@ function valutaRisposta() {
         ele.removeEventListener("click", onTimesUp);
     });
     document.getElementById("app").innerHTML = "";
-    clearInterval(timerInterval);
-    timeLeft = TIME_LIMIT;
-    timePassed = 0;
     let opzioni = document.querySelectorAll("label");
     opzioni.forEach(ele => {
         if (ele.innerText == domande[questionNumber].correct_answer) {
@@ -375,8 +494,8 @@ function valutaRisposta() {
     }
     questionNumber++;
     setTimeout(function () {
+        pFeedback.innerHTML = ``;
         mostraDomanda();
-        pFeedback.innerText = ``;
     }, 2000);
 }
 
@@ -398,6 +517,8 @@ function startTimer() {
 
 function onTimesUp() {
     clearInterval(timerInterval);
+    timeLeft = TIME_LIMIT;
+    timePassed = 0;
     valutaRisposta();
 }
 
@@ -441,3 +562,4 @@ function setCircleDasharray() {
         .getElementById("base-timer-path-remaining")
         .setAttribute("stroke-dasharray", circleDasharray);
 }
+

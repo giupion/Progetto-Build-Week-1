@@ -1,10 +1,14 @@
-let numeroCorrette=8;
-let numeroSbagliate=25;
-let numeroTotale=30;
+//let numeroCorrette=8;
+//let numeroSbagliate=25;
+//let numeroTotale=30;
 let percentualegiusto;
+
+let punteggioUtente = sessionStorage.getItem('punteggioUtente')
+let numDomande = sessionStorage.getItem('numDomande');
+let numeroSbagliate=numDomande-punteggioUtente;
 //accoglie il numero di risposte corrette e ne fa avere la percentuale
 let percentualeGiuste=function(){
- percentualegiusto=(numeroCorrette*100/numeroTotale).toFixed(1);
+ percentualegiusto=(punteggioUtente*100/numDomande).toFixed(1);
 
   return percentualegiusto
 }
@@ -22,7 +26,7 @@ console.log(percentualeGiuste())
 let percentualeSbagliate=function (){
 
 
-  let percentualesbagliato=(numeroSbagliate*100 /numeroTotale).toFixed(1)
+  let percentualesbagliato=(numeroSbagliate*100 /numDomande).toFixed(1)
 
 
   return percentualesbagliato
@@ -43,7 +47,7 @@ console.log(percentualeSbagliate())
 
 let quanteCorrette=function (){
 
-  let messaggioCorrette=numeroCorrette+" / " +numeroTotale+" questions";
+  let messaggioCorrette=punteggioUtente+" / " +numDomande+" questions";
   return messaggioCorrette
 }
 console.log(quanteCorrette())
@@ -55,7 +59,7 @@ selezioneTestoCorretto.innerText=quanteCorrette()
 
 let quanteSbagliate=function (){
 
-  let messaggioSbagliate=numeroSbagliate+" / " +numeroTotale+" questions";
+  let messaggioSbagliate=numeroSbagliate+" / " +numDomande+" questions";
   return messaggioSbagliate
 }
 console.log(quanteSbagliate())
