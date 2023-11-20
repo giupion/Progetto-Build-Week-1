@@ -285,6 +285,7 @@ let numDomande;
 let domande;
 sceltaDifficoltà();
 
+
 function sceltaNumero() {
     let input = `<input type="number" id="numeroDomande" placeholder="1" min="1" max="${questions.length}" value="${questions.length}"></input>`;
     h2.innerText = "Seleziona il numero di domande:";
@@ -303,7 +304,7 @@ function sceltaDifficoltà() {
                         
                     </select>
                     <input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}" ></input>
-                    <button type="button" onclick="iniziaTest()" >Inizia il test!</button>`
+                    <button type="button" onclick="mostraNumDomande(),iniziaTest()" >Inizia il test!</button>`
 }
 
 
@@ -320,7 +321,7 @@ function mostraNumDomande() {
     }
     document.querySelector('#numeroDomande').max = `${domande.length}`;
     document.querySelector('#numeroDomande').value = `${domande.length}`;
-   document.querySelector('#numeroDomande').disabled = false;
+    document.querySelector('#numeroDomande').disabled = false;
     document.querySelector("button").disabled = false;
 }
 
