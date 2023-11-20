@@ -16,7 +16,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -121,6 +121,26 @@ const questions = [
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
     {
+        category: "Science: Computers",
+        type: "multiple",
+        difficulty: "medium",
+        question: "What is the main function of the SQL SELECT statement?",
+        correct_answer: "Retrieve data from a database",
+        incorrect_answers: [
+          "Insert data into a database",
+          "Delete data from a database",
+          "Update data in a database",
+        ],
+    },
+    {
+        category: "Science: Computers",
+        type: "boolean",
+        difficulty: "medium",
+        question: "Java is a purely object-oriented programming language.",
+        correct_answer: "False",
+        incorrect_answers: ["True"],
+    },
+    {
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -193,6 +213,14 @@ const questions = [
         incorrect_answers: ["Hard Disk Drive", "Central Processing Unit", "Graphics Processing Unit"]
     },
     {
+        category: "Science: Computers",
+        type: "multiple",
+        difficulty: "hard",
+        question: "Which computer programming language is known as the 'language of the web'?",
+        correct_answer: "JavaScript",
+        incorrect_answers: ["Java", "Python", "C++"],
+    },
+    {
         type: "multiple",
         difficulty: "hard",
         category: "Science: Computers",
@@ -223,6 +251,14 @@ const questions = [
         question: "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
         correct_answer: "A' + B'",
         incorrect_answers: ["A'B + B'A", "A'B'", "AB' + AB"]
+    },
+    {
+        category: "Science: Computers",
+        type: "boolean",
+        difficulty: "hard",
+        question: "The programming language 'Fortran' is still in use.",
+        correct_answer: "True",
+        incorrect_answers: ["False"],
     },
     {
         type: "multiple",
@@ -273,6 +309,110 @@ const questions = [
         incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"]
     }
 ];
+
+const keywordsArray = [
+    "CPU", 
+    "Java", 
+    "keywords", 
+    "variable", 
+    "Snapchat", 
+    "logo", 
+    "Pointers", 
+    "C",
+    "programming", 
+    "C++",
+    "Preferred", 
+    "image format", 
+    "logos", 
+    "Wikimedia database", 
+    "Web design", 
+    "CSS", 
+    "Code name", 
+    "mobile operating system",
+    "Android 7.0", 
+    "Twitter",  
+    "Linux", 
+    "alternative", 
+    "Windows XP", 
+    "Programming language",
+    "Main function", 
+    "SQL", 
+    "Java", 
+    "object-oriented",  
+    "Computer",
+    "Programming languages", 
+    "low-level language", 
+    "Open-source program", 
+    "Redis", 
+    "relational database server",
+    "Windows NT", 
+    "monolithic kernel", 
+    "Unix Time", 
+    "number", 
+    "seconds", 
+    "elapsed since", 
+    "Programming", 
+    "call functions",
+    "same name", 
+    "different implementations", 
+    "Term", 
+    "GPU", 
+    "OEM manufacturer", 
+    "Clevo", 
+    "Sager", 
+    "notebook line",
+    "based", 
+    "country", 
+    "hardware device", 
+    "BIOS chip", 
+    "Computer", 
+    "known", 
+    "language", 
+    "web",
+    "Computer components", 
+    "built", 
+    "NAND gates", 
+    "Data structure", 
+    "FILO", 
+    "Acronym", 
+    "RIP", 
+    "DeMorgan's Theorem", 
+    "Boolean",
+    "Fortran", 
+    "still use", 
+    "Internet domain", 
+    ".fm", 
+    "country-code top-level domain", 
+    "DHCP", 
+    "stands", 
+    "Dynamic Host Configuration Port", 
+    "Dutch computer scientist", 
+    "Mark Overmars", 
+    "known", 
+    "creating",
+    "game development engine", 
+    "Name", 
+    "process", 
+    "sends", 
+    "one qubit", 
+    "information", 
+    "using", 
+    "two bits", 
+    "classical information",
+    "Hz", 
+    "video standard", 
+    "PAL", 
+    "support", 
+    "International System", 
+    "Quantities", 
+    "refer", 
+    "1024 bytes"
+];
+
+
+
+
+
 
 
 let punteggioUtente = 0;
