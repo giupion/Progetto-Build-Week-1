@@ -409,7 +409,13 @@ const keywordsArray = [
     "1024 bytes"
 ];
 
-
+function evidenziaParoleChiave(stringa){
+    let stringaEvidenziata=stringa;
+    keywordsArray.forEach(ele => {
+        stringaEvidenziata=stringaEvidenziata.replace(ele,`<span>${ele}</span>`)
+    });
+    return stringaEvidenziata;
+}
 
 
 
@@ -501,7 +507,7 @@ function mostraDomanda() {
         let form = document.querySelector("form");
         form.innerHTML = ``;
         let h2 = document.querySelector("h2");
-        h2.innerHTML = domande[questionNumber].question;
+        h2.innerHTML = evidenziaParoleChiave(domande[questionNumber].question);
         console.log(domande[questionNumber].question);
         risposte = shuffleRisposte(domande[questionNumber]);
         for (let i = 0; i < risposte.length; i++) {
@@ -580,15 +586,10 @@ function sottoArray(arr, n) {
     let sottoArray = [];
     let arrClone = [...arr];
     for (let i = 0; i < n; i++) {
-        sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);
-    
-   
-    }
-    
+        sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);  
+    }    
     console.log(sottoArray)
-    return sottoArray;
-
-  
+    return sottoArray;  
 }
 
 function shuffleRisposte(domanda) {
