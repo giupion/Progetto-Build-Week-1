@@ -1,7 +1,13 @@
+let botton = document.querySelector("button")
+let checkbox = document.querySelector("input")
+console.log(checkbox)
+function checked () {
+if(checkbox.checked){
+   botton.disabled=false;
+}
+}
 
-//let button = document.querySelector("button")
-//button.addEventListener("click",(e)=>{
-   // e.preventDefault()
-   // location.href(("https://epicode.com/it/corso-web-developer/"))
-//})
+checkbox.addEventListener("click",()=>{
+   checked();
+})
 
