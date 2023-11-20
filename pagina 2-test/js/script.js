@@ -16,7 +16,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 30;
+const TIME_LIMIT = 2;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -311,6 +311,7 @@ const questions = [
 ];
 
 const keywordsArray = [
+    "C?",
     "CPU", 
     "Java", 
     "keywords", 
@@ -318,7 +319,7 @@ const keywordsArray = [
     "Snapchat", 
     "logo", 
     "Pointers", 
-    "C",
+    "C ",
     "programming", 
     "C++",
     "Preferred", 
@@ -348,12 +349,9 @@ const keywordsArray = [
     "Windows NT", 
     "monolithic kernel", 
     "Unix Time", 
-    "number", 
-    "seconds", 
-    "elapsed since", 
+    "number",  
     "Programming", 
     "call functions",
-    "same name", 
     "different implementations", 
     "Term", 
     "GPU", 
@@ -362,11 +360,9 @@ const keywordsArray = [
     "Sager", 
     "notebook line",
     "based", 
-    "country", 
     "hardware device", 
     "BIOS chip", 
     "Computer", 
-    "known", 
     "language", 
     "web",
     "Computer components", 
@@ -379,24 +375,16 @@ const keywordsArray = [
     "DeMorgan's Theorem", 
     "Boolean",
     "Fortran", 
-    "still use", 
     "Internet domain", 
     ".fm", 
     "country-code top-level domain", 
-    "DHCP", 
-    "stands", 
+    "DHCP",  
     "Dynamic Host Configuration Port", 
-    "Dutch computer scientist", 
     "Mark Overmars", 
-    "known", 
-    "creating",
     "game development engine", 
-    "Name", 
-    "process", 
-    "sends", 
+    "process",  
     "one qubit", 
     "information", 
-    "using", 
     "two bits", 
     "classical information",
     "Hz", 
@@ -405,9 +393,97 @@ const keywordsArray = [
     "support", 
     "International System", 
     "Quantities", 
-    "refer", 
-    "1024 bytes"
+    "1024 bytes",
 ];
+
+const feedbackPositivo = [
+    "Corretto. Risposta esatta.",
+    "Esatto. Hai risposto giusto.",
+    "Giusto. Risposta corretta.",
+    "Ok. La tua risposta è giusta.",
+    "Bene. Hai indovinato.",
+    "È corretto. Continua così.",
+    "Sì, esatto. Hai risposto bene.",
+    "Giusto così. Punti guadagnati.",
+    "Hai ragione. Risposta corretta.",
+    "Bravo. La tua risposta è corretta.",
+    "Corretto. Niente male.",
+    "Sì, esatto. Prosegui così.",
+    "Hai capito. Risposta giusta.",
+    "Ok. Punti meritati.",
+    "Giusto. Non male.",
+    "Esatto. Continua così.",
+    "Corretto. Hai la risposta giusta.",
+    "Sì, esatto. Risposta corretta.",
+    "Ben fatto. Risposta giusta.",
+    "Giusto. Ottima risposta.",
+    "Hai indovinato. Risposta corretta.",
+    "Bene. Continua così.",
+    "Esatto. Hai fatto bene.",
+    "Sì, è corretto. Bravissimo!",
+    "Ok. Risposta giusta.",
+    "Giusto. Prosegui così.",
+    "Hai ragione. Punti guadagnati.",
+    "Corretto. Risposta esatta.",
+    "È giusto. Continua così."
+];
+
+const feedbackNegativo = [
+    "Sbagliato. Riprova.",
+    "Errore. La risposta non è corretta.",
+    "No, mi dispiace. Risposta sbagliata.",
+    "Peccato. Non è la risposta giusta.",
+    "Incorretto. Prova un'altra volta.",
+    "Errore. La tua risposta è sbagliata.",
+    "No, non è corretto. Riprova.",
+    "Sbagliato. Purtroppo non è la risposta corretta.",
+    "Niente da fare. La risposta è sbagliata.",
+    "Peccato. La risposta corretta non è quella.",
+    "Mi dispiace, la risposta è sbagliata.",
+    "Errore. Non hai indovinato.",
+    "No, non è giusto. La risposta corretta è diversa.",
+    "Peccato. La risposta corretta era un'altra.",
+    "Sbagliato. Non è quella la risposta corretta.",
+    "Incorretto. Meglio fortuna la prossima volta.",
+    "Mi spiace, ma la risposta è sbagliata.",
+    "No, non è la risposta giusta. Riprova.",
+    "Errore. La risposta corretta è diversa.",
+    "Peccato. La tua risposta è errata.",
+    "Non è giusto. La risposta corretta è un'altra.",
+    "Sbagliato. Continua a provare.",
+    "Mi dispiace, la tua risposta è sbagliata.",
+    "Errore. Non hai indovinato questa volta.",
+    "No, non è la risposta corretta. Riprova.",
+    "Peccato. La risposta giusta era diversa.",
+    "Sbagliato. La risposta corretta è un'altra.",
+    "Incorretto. Meglio fortuna la prossima volta.",
+    "Mi spiace, ma anche questa volta hai sbagliato."
+];
+
+const feedBackTimeOut = [
+    "Tempo scaduto. La risposta non è stata data.",
+    "Mi dispiace, hai superato il tempo limite per rispondere.",
+    "Peccato, il tempo è scaduto. Nessuna risposta data.",
+    "Hai esaurito il tempo disponibile. Nessuna risposta fornita.",
+    "Tempo scaduto. La risposta manca.",
+    "Il tempo è scaduto. Nessuna risposta data.",
+    "Peccato, hai superato il limite di tempo. Risposta mancante.",
+    "Hai esaurito il tempo. Nessuna risposta è stata fornita.",
+    "Tempo scaduto. La tua risposta manca.",
+    "Mi spiace, hai superato il tempo limite. La risposta è mancante.",
+    "Peccato, il tempo è scaduto. Nessuna risposta fornita.",
+    "Hai esaurito il tempo disponibile. Nessuna risposta data.",
+    "Tempo scaduto. La risposta manca.",
+    "Il tempo è scaduto. Nessuna risposta data.",
+    "Peccato, hai superato il limite di tempo. Risposta mancante.",
+    "Hai esaurito il tempo. Nessuna risposta è stata fornita.",
+    "Tempo scaduto. La tua risposta manca.",
+    "Mi spiace, hai superato il tempo limite. La risposta è mancante.",
+    "Peccato, il tempo è scaduto. Nessuna risposta fornita.",
+    "Hai esaurito il tempo disponibile. Nessuna risposta data."
+];
+
+
 
 function evidenziaParoleChiave(stringa){
     let stringaEvidenziata=stringa;
@@ -416,6 +492,7 @@ function evidenziaParoleChiave(stringa){
     });
     return stringaEvidenziata;
 }
+
 
 
 
@@ -588,7 +665,6 @@ function sottoArray(arr, n) {
     for (let i = 0; i < n; i++) {
         sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);  
     }    
-    console.log(sottoArray)
     return sottoArray;  
 }
 
@@ -619,15 +695,15 @@ function valutaRisposta() {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteCorretta";
             console.log("risposta esatta");
             punteggioUtente++;
-            pFeedback.innerText += `Risposta esatta!`;
+            pFeedback.innerText += feedbackPositivo[Math.floor(Math.random()*feedbackPositivo.length)];
         } else {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteSbagliata";
             console.log("Risposta sbagliata.");
-            pFeedback.innerText += `Risposta sbagliata.`;
+            pFeedback.innerText +=  feedbackNegativo[Math.floor(Math.random()*feedbackNegativo.length)];
         }
     } catch (error) {
         console.log("Non hai risposto!")
-        pFeedback.innerText += `Non hai risposto!`
+        pFeedback.innerText += feedBackTimeOut[Math.floor(Math.random()*feedBackTimeOut.length)];
     }
     questionNumber++;
     setTimeout(function () {
