@@ -483,6 +483,15 @@ const feedBackTimeOut = [
     "Hai esaurito il tempo disponibile. Nessuna risposta data."
 ];
 
+const fraseMemePositiva = ["Umberto sarebbe fiero di te",
+"Ma ti sei dopato?",
+"Umberto, sei proprio tu??????"
+];
+
+const fraseMemeNegativa = ["Umberto ti prenderebbe a calci",
+"Ma sei mbriaco??",
+"Umberto ti lascia e non torna mai più"]
+
 
 
 function evidenziaParoleChiave(stringa){
@@ -506,6 +515,9 @@ let form = document.querySelector("form");
 let main = document.querySelector("main");
 let numDomande;
 let domande=[];
+let contatore=0;
+let indice1=1;
+let indice2=1;
 sceltaDifficoltà();
 mostraNumDomande();
 
@@ -695,15 +707,40 @@ function valutaRisposta() {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteCorretta";
             console.log("risposta esatta");
             punteggioUtente++;
-            pFeedback.innerText += feedbackPositivo[Math.floor(Math.random()*feedbackPositivo.length)];
+            if(contatore<0){
+                contatore=0;
+            }
+            contatore++;
+            if (contatore==indice1*5 ){
+                indice1++;
+                pFeedback.innerText += fraseMemePositiva[indice1-1];
+            }else{
+                pFeedback.innerText += feedbackPositivo[Math.floor(Math.random()*feedbackPositivo.length)];
+            }
+            if(indice1==3){
+                indice1=1;
+            }
         } else {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteSbagliata";
             console.log("Risposta sbagliata.");
-            pFeedback.innerText +=  feedbackNegativo[Math.floor(Math.random()*feedbackNegativo.length)];
+            if(contatore>0){
+                contatore=0;
+            }
+            contatore--;
+            if (contatore==(-1)*indice2*5 ){
+                indice2++;
+                pFeedback.innerText += fraseMemeNegativa[indice2-1];
+            }else{
+                pFeedback.innerText +=  feedbackNegativo[Math.floor(Math.random()*feedbackNegativo.length)]
+            }
+            if(indice2==3){
+                indice2=1;
+            }
         }
     } catch (error) {
         console.log("Non hai risposto!")
         pFeedback.innerText += feedBackTimeOut[Math.floor(Math.random()*feedBackTimeOut.length)];
+        contatore =0;
     }
     questionNumber++;
     setTimeout(function () {
