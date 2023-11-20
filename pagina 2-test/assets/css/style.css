@@ -155,7 +155,6 @@ main h2 span {
 }
 
 .test {
-  margin: auto;
   max-width: 60rem;
   min-height: 10rem;
   max-height: 20rem;
@@ -165,7 +164,6 @@ main h2 span {
   color: white;
   display: block;
   box-sizing: content-box;
-  margin-top: 1rem;
 }
 
 /*.test label {
@@ -291,6 +289,7 @@ button:active {
 }
 
 .test input[type="number"] {
+  vertical-align: middle;
   display: inline-block;
   width: auto;
   height: auto;
@@ -299,7 +298,7 @@ button:active {
   background-color: rgb(255,255,255,0.05);
   box-shadow: inset 2px 2px 3px rgba(255,255,255,0.7), inset 0 2px 3px rgba(255, 255, 255, 0.3);
   padding: 1.3rem 0 1.3rem 0;
-  border-radius: 2rem;
+  border-radius: 3rem;
   text-align: center;
   border: none;
   color: white;
@@ -307,6 +306,23 @@ button:active {
   font-family: 'Outfit', sans-serif;
 }
 
+#selettoreDifficoltà {
+  vertical-align: middle;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0.5rem 0.6rem 0 0.6rem;
+  background-size: cover;
+  background-color: rgb(146, 2, 103);
+  box-shadow: inset 2px 2px 3px rgba(255,255,255,0.7), inset 0 2px 3px rgba(255, 255, 255, 0.3);
+  padding: 1.3rem 0.5rem 1.3rem 0.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Outfit', sans-serif;
+}
 
 
 /*footer*/
@@ -326,7 +342,7 @@ footer p span {
   color: #D20094;
 }
 
-/*DA QUA PAGINA 3*/
+/*DA QUA PAGINA 3
 
 #title{
   color: white;
@@ -466,7 +482,7 @@ font-weight: 100;}
   margin-top:-100px;}
 
 #numeroSbagliate{text-align: center;
-  margin-top:-100px;}
+  margin-top:-100px;}*/
 
 
 
