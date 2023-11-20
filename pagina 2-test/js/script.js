@@ -16,7 +16,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 30;
+const TIME_LIMIT = 5;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -282,8 +282,9 @@ let pFeedback = document.querySelector("p");
 let form = document.querySelector("form");
 let main = document.querySelector("main");
 let numDomande;
-let domande;
+let domande=[];
 sceltaDifficoltà();
+mostraNumDomande();
 
 
 function sceltaNumero() {
@@ -293,6 +294,7 @@ function sceltaNumero() {
     form.innerHTML = input + bottoneNumero;
     domande = questions;
 }
+
 function sceltaDifficoltà() {
     h2.innerText = "Seleziona il livello di difficoltà e il numero delle domande:";
 
@@ -300,14 +302,11 @@ function sceltaDifficoltà() {
                         <option value="qualsiasi">Qualsiasi</option>
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                        
-                    </select>
+                        <option value="hard">Hard</option>                        
+                     </select>
                     <input type="number" id="numeroDomande" min="1" max="${questions.length}" value="${questions.length}" ></input>
-                    <button type="button" onclick="mostraNumDomande(),iniziaTest()" >Inizia il test!</button>`
+                    <button type="button" onclick="iniziaTest()" >Inizia il test!</button>`
 }
-
-
 
 function mostraNumDomande() {
     let selettoreDifficoltà = document.querySelector("#selettoreDifficoltà");
@@ -321,13 +320,11 @@ function mostraNumDomande() {
     }
     document.querySelector('#numeroDomande').max = `${domande.length}`;
     document.querySelector('#numeroDomande').value = `${domande.length}`;
-    document.querySelector('#numeroDomande').disabled = false;
-    document.querySelector("button").disabled = false;
+    
 }
 
-
 function iniziaTest() {
-    numDomande = Number(document.getElementById("numeroDomande").value);
+    numDomande = Number(document.querySelector("#numeroDomande").value);
     console.log(numDomande);
     domande = sottoArray(domande, numDomande);
     mostraDomanda();
@@ -443,7 +440,7 @@ function sottoArray(arr, n) {
     let sottoArray = [];
     let arrClone = [...arr];
     for (let i = 0; i < n; i++) {
-        sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0])
+        sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);
     }
     return sottoArray;
 }
@@ -455,7 +452,7 @@ function shuffleRisposte(domanda) {
     return sottoArray(risposte, risposte.length);
 }
 
-function valutaRisposta() {
+function valutaRisposta() {   
     console.log("sono in valutaRisposta()");
     document.querySelectorAll("input").forEach(ele => {
         ele.removeEventListener("click", onTimesUp);
@@ -473,7 +470,7 @@ function valutaRisposta() {
         let rispostaUtente = document.querySelector('input[name="opzioni"]:checked+label').innerText;
         if (rispostaUtente === domande[questionNumber].correct_answer) {
             document.querySelector('input[name="opzioni"]:checked+label').id = "rispostaUtenteCorretta";
-            console.log("risposta esatta")
+            console.log("risposta esatta");
             punteggioUtente++;
             pFeedback.innerText += `Risposta esatta!`;
         } else {
@@ -489,7 +486,7 @@ function valutaRisposta() {
     setTimeout(function () {
         pFeedback.innerHTML = ``;
         mostraDomanda();
-    }, 2000);
+    }, 2200);
 }
 
 function startTimer() {
