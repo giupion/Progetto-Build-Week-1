@@ -580,9 +580,19 @@ function sottoArray(arr, n) {
     let sottoArray = [];
     let arrClone = [...arr];
     for (let i = 0; i < n; i++) {
+<<<<<<< HEAD
+        sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0])
+    
+   
+=======
         sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);
+>>>>>>> 5ff96ecd7ebddf3feda1bd79124d770e47b1e849
     }
+    
+    console.log(sottoArray)
     return sottoArray;
+
+  
 }
 
 function shuffleRisposte(domanda) {
