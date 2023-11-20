@@ -122,7 +122,12 @@ button{
   border-color:white ;
   color: white;
   background-color: transparent;
+  cursor: pointer;
   }
+
+button:hover {
+  font-size: 21px;  
+}
 
 
 
