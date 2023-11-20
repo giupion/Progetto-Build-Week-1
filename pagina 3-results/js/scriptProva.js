@@ -96,7 +96,7 @@ cong.innerText="Congratulations!"
 
   else{cong.innerText="Sorry!"
   
-  passed.innerText="Unfurtunately you  didn't passed the exam."
+  passed.innerText="Unfortunately you  didn't passed the exam."
   certifi.innerText="Try again! not blame yourself and keep pushing!"
  }
  
