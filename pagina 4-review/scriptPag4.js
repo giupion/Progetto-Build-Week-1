@@ -15,8 +15,8 @@ for(let i =0;i<stellina.length;i++){
         for(let c=i;c>=0;c--){
             stellina[c].style.color= "#00FFFF"
         }
-        for(let j=i+1;j>=i;j++){
-            stellina[j].style.color=" rgb(0, 0, 0,0.6)"
+        for(let j=i+1;j<stellina.length;j++){
+            stellina[j].style.color = "rgb(0, 0, 0, 0.6)"
         }
     })
 }
