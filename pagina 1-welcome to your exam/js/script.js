@@ -4,7 +4,10 @@ console.log(checkbox)
 function checked () {
 if(checkbox.checked){
    botton.disabled=false;
+}else{
+   botton.disabled=true;
 }
+
 }
 
 checkbox.addEventListener("click",()=>{
