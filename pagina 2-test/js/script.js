@@ -132,14 +132,6 @@ const questions = [
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
-        question: "In HTML, which non-standard tag used to be used to make elements scroll across the viewport?",
-        correct_answer: "<marquee></marquee>",
-        incorrect_answers: ["<scroll></scroll>", "<move></move>", "<slide></slide>"]
-    },
-    {
-        type: "multiple",
-        difficulty: "medium",
-        category: "Science: Computers",
         question: "Which of these programming languages is a low-level language?",
         correct_answer: "Assembly",
         incorrect_answers: ["Python", "C#", "Pascal"]
